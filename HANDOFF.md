@@ -24,7 +24,8 @@ No build step and no backend. Chart.js 4.4.1 loads from cdnjs; fonts load from G
 - **Page:** finished; 8 headless checks pass (`npm test`).
 - **Hosting:** live at https://ulysses4ever.github.io/vb/ (repo `ulysses4ever/vb`). The workflow
   `.github/workflows/pages.yml` publishes `site/` to GitHub Pages on every push to `main`.
-- **Not done:** automatic monthly updates. See "Next steps".
+- **Updates:** automatic. A systemd timer on the owner's machine (um690) runs `tools/update.py` on the
+  3rd of each month and pushes, which redeploys the site. See "Monthly updates".
 
 ## Layout
 
@@ -34,6 +35,7 @@ site/data.json                 generated: do not hand-edit, run the build
 data/bulletins/YYYY-MM.json    one extract per bulletin (the source of record)
 data/uscis_chart.json          USCIS chart per month, with a source URL
 tools/build_data.py            validates data/ and writes site/data.json
+tools/update.py                adds new months from the dataset and USCIS, then runs the build
 tools/test.mjs                 headless checks; serves site/ itself
 package.json                   npm scripts and test dependencies
 .github/workflows/pages.yml    publishes site/ to GitHub Pages on push to main
@@ -42,10 +44,14 @@ package.json                   npm scripts and test dependencies
 ## Commands
 
 ```sh
+python3 tools/update.py               # add new bulletins and USCIS charts (see "Monthly updates")
 python3 tools/build_data.py           # rebuild site/data.json; exits 1 on any problem
 npm install && npm test               # headless checks (SCREENSHOTS=1 npm test also writes PNGs)
 python3 -m http.server -d site 8000   # view at http://localhost:8000
 ```
+
+On NixOS, Puppeteer's own Chrome download doesn't run. Install with `PUPPETEER_SKIP_DOWNLOAD=1 npm install`
+and test with `PUPPETEER_EXECUTABLE_PATH=$(command -v chromium) npm test`.
 
 Opening `index.html` straight from disk (`file://`) can't load `data.json`, because browsers block
 `fetch` there. The page then shows an error and an "open a JSON file" control as a fallback.
@@ -77,15 +83,17 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
   `EB-5 Rural`, `EB-5 High Unemployment`, `EB-5 Infrastructure`. Countries: `ROW`, `CN`, `IN`, `MX`, `PH`.
   The page also accepts other keys and lists them after these.
 - The build checks: valid values and real dates; Dates for Filing never earlier than Final Action;
-  a USCIS chart for every month; no missing months; 48 spot checks (`SPOT_CHECKS` in `build_data.py`).
+  a USCIS chart for every month but the newest (which may be `null` until USCIS names it); no missing
+  months; 48 spot checks (`SPOT_CHECKS` in `build_data.py`).
 
 ## How the data was gathered and checked
 
 - **Cutoffs.** The session's shell could not reach travel.state.gov, so each bulletin page was read
   with a web-fetch tool. Its two employment-based tables were transcribed to CSV, converted, and
   written to `data/bulletins/`, and every conversion was re-parsed and compared cell by cell. The fetch
-  tool returns a model's transcription of the page rather than raw HTML, so treat the extracts as very
-  likely right, not byte-exact. A real HTML parser should re-derive them (see "Next steps").
+  tool returns a model's transcription of the page rather than raw HTML, so the extracts were only
+  "very likely right" until 2026-10-11. Then all 4,900 cells matched armanckeser/visa-bulletin-data,
+  which parses the bulletin pages with a real HTML parser (see "Monthly updates").
 - **Independent checks.** 48 values spread across every fiscal year in the data were compared with law-firm and
   university summaries of the same bulletins, and the July 2023 EB-2 ROW filing date was re-read from
   the State Department page. All match.
@@ -128,38 +136,63 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
 - Fonts: Merriweather for the title, Public Sans for the interface, Roboto Mono for the bulletin's own
   date codes (15MAR26).
 
+## Monthly updates
+
+- **Why a third-party source.** travel.state.gov sits behind Cloudflare and answers every automated
+  client with 403. On 2026-10-11 that included curl, an undisguised headless Chrome and Claude's web
+  fetch. The Internet Archive's crawler has been blocked too since mid-2026, so its snapshots are 403
+  pages. Getting past that would mean disguising the client; the owner chose a third-party source instead.
+- **The source.** [armanckeser/visa-bulletin-data](https://github.com/armanckeser/visa-bulletin-data),
+  CC0. A GitHub Action checks for new bulletins every 6 hours, keeps each one's page in `raw/` and
+  parses it strictly (an unknown header, row or cell is an error). It covers October 2015 onward.
+  `tools/update.py` reads its `data/visa_bulletin.json` and imports the months after the newest one in
+  `data/bulletins/`. Each new file carries `"source"` naming the dataset, and is written in the
+  one-line-per-category layout of most existing files.
+- **The safety check.** Before importing anything, the updater compares every month already in
+  `data/bulletins/` with the dataset, cell by cell. Any difference stops the run with nothing written,
+  because it means the dataset or its parser changed. On 2026-10-11 all 4,900 cells matched. The
+  dataset files the current EB-5 unreserved row under `EB5_UNRESERVED_I5_R5`, which its README reserves
+  for May 2022. The updater accepts either that code or `EB5_UNRESERVED`.
+- **USCIS chart.** uscis.gov does answer, and its page names the employment-based chart for the current
+  month (sometimes the next too). A month that page no longer shows falls back to the dataset's weekly
+  record of the same page (its `data/uscis_chart.json`). A recorded chart is never overwritten, and a
+  contradiction from the USCIS page stops the run. The newest month may stay `null`; the page then
+  says "USCIS chart not recorded".
+- **Exit status.** 0 means `data/` has the current month's bulletin. 3 means the dataset doesn't have
+  it yet; whatever it has is still imported. 1 means anything else went wrong.
+- **The timer.** `~/dotfiles/machines/um690/vb-update.nix` runs it on the 3rd of each month at 09:00 local
+  time. By then that month's bulletin is out (it can come as late as the 29th of the month before) and
+  USCIS's page names its chart. The job uses a clone of its own in `/var/lib/vb-update/vb`, commits as
+  the owner, and pushes with a deploy key that can write to this repo only (`~/.ssh/vb-deploy`).
+  Logs: `journalctl -u vb-update`. Run it now: `sudo systemctl start vb-update`. A failed run, exit 3
+  included, shows in `systemctl --failed`.
+
+### If the dataset goes away
+
+Read the bulletin pages directly. You'll have to fetch them by hand, given the block above.
+
+- URL: `https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/{FY}/visa-bulletin-for-{month}-{year}.html`,
+  where `{month}` is the lowercase full month name and `{FY}` is `year + 1` for October–December
+  bulletins (October 2026 lives under `/2027/`). The index page
+  `https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html` lists published
+  bulletins; they usually appear mid-month for the following month.
+- Parse the tables under the headings "A. FINAL ACTION DATES FOR EMPLOYMENT-BASED PREFERENCE CASES"
+  and "B. DATES FOR FILING OF EMPLOYMENT-BASED VISA APPLICATIONS". Map columns by header text:
+  "All Chargeability Areas Except Those Listed" → ROW, "CHINA-mainland born" → CN, "INDIA" → IN,
+  "MEXICO" → MX, "PHILIPPINES" → PH; ignore any other column. Map rows by keyword: 1st, 2nd, 3rd,
+  Other Workers, 4th, Certain Religious Workers, 5th Unreserved, then the Rural, High Unemployment and
+  Infrastructure set-asides. Convert `DDMMMYY` to `YYYY-MM-DD` (all years are 20YY) and keep `C` and `U`.
+- Before trusting a new parser, run it over the existing months and diff against `data/bulletins/`.
+
 ## Next steps
 
-1. **Monthly updater (the main open task).**
-   - Cutoffs: `https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/{FY}/visa-bulletin-for-{month}-{year}.html`,
-     where `{month}` is the lowercase full month name and `{FY}` is `year + 1` for October–December
-     bulletins (October 2026 lives under `/2027/`). The index page
-     `https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html` lists published
-     bulletins; they usually appear mid-month for the following month.
-   - Parse the tables under the headings "A. FINAL ACTION DATES FOR EMPLOYMENT-BASED PREFERENCE CASES"
-     and "B. DATES FOR FILING OF EMPLOYMENT-BASED VISA APPLICATIONS". Map columns by header text:
-     "All Chargeability Areas Except Those Listed" → ROW, "CHINA-mainland born" → CN, "INDIA" → IN,
-     "MEXICO" → MX, "PHILIPPINES" → PH; ignore any other column. Map rows by keyword: 1st, 2nd, 3rd,
-     Other Workers, 4th, Certain Religious Workers, 5th Unreserved, then the Rural, High Unemployment and
-     Infrastructure set-asides. Convert `DDMMMYY` to `YYYY-MM-DD` (all years are 20YY) and keep `C` and `U`.
-   - USCIS chart: `https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin`.
-     Its employment-based section names the chart for the current month and sometimes the next. Add the
-     month, chart and URL to `data/uscis_chart.json`. USCIS usually posts a few days after the bulletin.
-     The build fails while the newest month has no chart; relax that check for the newest month only if
-     you want to publish before USCIS posts (the page already handles `null`).
-   - Write `data/bulletins/YYYY-MM.json`, run the build and the tests, then commit or open a PR. A
-     GitHub Actions schedule (say, daily from the 5th to the 25th, doing nothing when there's nothing
-     new) fits well.
-   - Before trusting the parser, run it over all 49 existing months and diff against `data/bulletins/`.
-     Any difference is either a parser bug or a transcription error in an extract; settle it from the
-     bulletin page.
-   - uscis.gov refused automated fetches during the session. Expect bot protection there and keep a
-     fallback, such as recording the chart by hand from the page.
-2. **Optional.** A notice when a configured priority date becomes fileable under the chart USCIS
-   accepts; a backfill to October 2015, when the Dates for Filing chart began; family-based tables.
+1. **Optional.** A notice when a configured priority date becomes fileable under the chart USCIS
+   accepts; a backfill to October 2015, when the Dates for Filing chart began (the dataset has it);
+   family-based tables.
 
 ## Gotchas
 
+- travel.state.gov blocks automated clients (see "Monthly updates"); uscis.gov doesn't.
 - October–December bulletins live in the next fiscal year's folder.
 - Some FY2023 bulletins print an extra El Salvador/Guatemala/Honduras column for EB-4. Ignore it.
 - Row labels change punctuation between months (for example "(Rural - 20%)"), so match by keyword.

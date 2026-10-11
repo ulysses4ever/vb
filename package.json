@@ -5,6 +5,7 @@
   "description": "Static page charting U.S. Visa Bulletin employment-based cutoffs from data.json",
   "scripts": {
     "build:data": "python3 tools/build_data.py",
+    "update": "python3 tools/update.py",
     "test": "node tools/test.mjs"
   },
   "devDependencies": {

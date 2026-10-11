@@ -11,8 +11,9 @@ Inputs (relative to the repo root):
   data/uscis_chart.json        {"2026-10": {"chart": "filing" | "final" | null, "source": "<url>"}, ...}
 
 Checks (exit 1 on any problem): month keys, value format (C, U or a real ISO date),
-Dates for Filing never earlier than Final Action, a USCIS chart recorded for every month,
-no missing months, and spot checks against values confirmed from independent sources.
+Dates for Filing never earlier than Final Action, a USCIS chart recorded for every month
+but the newest (which may be null until USCIS names it), no missing months, and spot
+checks against values confirmed from independent sources.
 """
 import argparse
 import datetime as dt
@@ -80,7 +81,8 @@ def main():
 
     uscis = json.loads((ROOT / "data" / "uscis_chart.json").read_text())
     problems, bulletins = [], []
-    for f in sorted((ROOT / "data" / "bulletins").glob("*.json")):
+    files = sorted((ROOT / "data" / "bulletins").glob("*.json"))
+    for f in files:
         d = json.loads(f.read_text())
         mo = d.get("month")
         if mo != f.stem or not MONTH_RE.match(mo or ""):
@@ -106,7 +108,9 @@ def main():
                 elif fa != "C" and df != "C" and df < fa:
                     problems.append(f"{mo} {cat} {c}: filing {df} is earlier than final {fa}")
         u = uscis.get(mo) or {}
-        if u.get("chart") not in ("filing", "final"):
+        # USCIS names its chart days after the bulletin comes out, so the newest month may
+        # still be null; the page shows that as "USCIS chart not recorded".
+        if u.get("chart") not in ("filing", "final") and not (f == files[-1] and u.get("chart") is None):
             problems.append(f"{mo}: no USCIS chart recorded in data/uscis_chart.json")
         bulletins.append({
             "month": mo,
@@ -134,7 +138,8 @@ def main():
         "description": "U.S. Visa Bulletin employment-based cutoff dates, with the chart USCIS designated for I-485 filing each month.",
         "generated": args.generated,
         "sources": {
-            "cutoffs": "U.S. Department of State Visa Bulletin (url per month)",
+            "cutoffs": "U.S. Department of State Visa Bulletin (url per month); months added by tools/update.py "
+                       "come from armanckeser/visa-bulletin-data, which parses cached copies of those pages",
             "uscis_chart": "USCIS 'Adjustment of Status Filing Charts from the Visa Bulletin', as quoted per month (uscis_source)",
         },
         "countries": {"ROW": "All chargeability areas except those listed", "CN": "China (mainland-born)",

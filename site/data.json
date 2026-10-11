@@ -2,7 +2,7 @@
  "description": "U.S. Visa Bulletin employment-based cutoff dates, with the chart USCIS designated for I-485 filing each month.",
  "generated": "2026-10-11",
  "sources": {
-  "cutoffs": "U.S. Department of State Visa Bulletin (url per month)",
+  "cutoffs": "U.S. Department of State Visa Bulletin (url per month); months added by tools/update.py come from armanckeser/visa-bulletin-data, which parses cached copies of those pages",
   "uscis_chart": "USCIS 'Adjustment of Status Filing Charts from the Visa Bulletin', as quoted per month (uscis_source)"
  },
  "countries": {
