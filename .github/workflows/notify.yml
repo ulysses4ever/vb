@@ -1,0 +1,66 @@
+# Opens an issue whenever a push adds a bulletin or records the chart USCIS takes, and
+# @-mentions the owner, so that GitHub emails them; tools/report.py writes it. The issue
+# comes from github-actions[bot] because GitHub doesn't notify people of their own activity,
+# and every push here is the owner's: the um690 timer pushes with a deploy key, as them.
+#
+# Daily, it also checks that the current month's bulletin is in. From the 3rd on, a missing
+# one means the bulletin is late or, more likely, the updater has stopped (um690 is off, or
+# tools/update.py keeps failing). One issue says so; close it once that's sorted.
+name: Notify
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**']
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Send the notification for this bulletin month again (YYYY-MM)'
+        required: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      OWNER: ${{ github.repository_owner }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # report.py reads site/data.json as it was before the push
+
+      - name: Report new bulletins and USCIS charts
+        if: github.event_name != 'schedule'
+        env:
+          BEFORE: ${{ github.event.before }}
+          MONTH: ${{ inputs.month }}
+        run: |
+          if [ -n "$MONTH" ]; then
+            python3 tools/report.py --month "$MONTH" --mention "$OWNER" > "$RUNNER_TEMP/report"
+          else
+            python3 tools/report.py --since "$BEFORE" --mention "$OWNER" > "$RUNNER_TEMP/report"
+          fi
+          if [ -s "$RUNNER_TEMP/report" ]; then
+            tail -n +3 "$RUNNER_TEMP/report" > "$RUNNER_TEMP/body"
+            gh issue create --title "$(head -n 1 "$RUNNER_TEMP/report")" --body-file "$RUNNER_TEMP/body"
+          fi
+
+      - name: Check that the current month's bulletin is in
+        if: github.event_name == 'schedule'
+        run: |
+          month=$(date -u +%Y-%m)
+          if [ "$(date -u +%-d)" -lt 3 ] || [ -e "data/bulletins/$month.json" ]; then
+            exit 0
+          fi
+          title="No bulletin for $month in the tracker yet"
+          open=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq length)
+          if [ "$open" = 0 ]; then
+            gh issue create --title "$title" --body "@$OWNER It's past the 3rd and data/bulletins has no $month.json. Either the bulletin is late or the um690 timer has stopped: see \`systemctl status vb-update\` and \`journalctl -u vb-update\` there. Close this once it's in."
+          fi
