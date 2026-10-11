@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Visa Bulletin Tracker</title>
+<!--
+  Static page. Keep data.json next to this file, or load another file with ?data=<url>
+  (also ?category=EB-2&country=ROW&pd=2027-01-15 to preselect).
+
+  data.json shape (only "bulletins" is required):
+  {
+    "generated": "2026-10-11",
+    "bulletins": [
+      {
+        "month": "2026-10",                  bulletin month, YYYY-MM
+        "url": "https://travel.state.gov/…", optional; the table links to it
+        "uscis_chart": "filing",             "filing" | "final" | null: the chart USCIS took for I-485s
+        "uscis_source": "https://…",         optional
+        "final":  { "EB-2": { "ROW": "2025-01-01", "CN": "2021-10-01", "IN": "2013-11-01" }, … },
+        "filing": { "EB-2": { "ROW": "2026-03-15", … }, … }
+      }
+    ]
+  }
+  A cutoff is "C" (current), "U" (unavailable) or an ISO date. Countries: ROW, CN, IN, MX, PH.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Public+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, max 760px: title, queue filters, latest-bulletin readout, lag chart, full table, sources */
+:root {
+  --bg: #fafbfc; --surface: #ffffff; --ink: #15181d; --ink-2: #4b525c; --muted: #737a84;
+  --line: #e3e6ea; --axis: #c5cad1; --accent: #1a4480; --chip-bg: #e9eef6; --shadow: rgba(20, 24, 30, .10);
+  --s-filing: #2a78d6; --s-final: #eb6834; --band: rgba(42, 120, 214, .08); --band-edge: rgba(42, 120, 214, .35);
+  --force-bg: rgba(42, 120, 214, .08);
+  --good-bg: rgba(12, 163, 12, .12); --good-ink: #006300; --warn-bg: rgba(250, 178, 25, .22); --warn-ink: #6b4a00;
+  --font-display: "Merriweather", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-data: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121417; --surface: #1a1d21; --ink: #eceef1; --ink-2: #b7bdc6; --muted: #8b929c;
+    --line: #2a2e34; --axis: #3b4048; --accent: #8db5ec; --chip-bg: rgba(141, 181, 236, .14); --shadow: rgba(0, 0, 0, .45);
+    --s-filing: #3987e5; --s-final: #d95926; --band: rgba(57, 135, 229, .13); --band-edge: rgba(57, 135, 229, .5);
+    --force-bg: rgba(57, 135, 229, .16);
+    --good-bg: rgba(12, 163, 12, .18); --good-ink: #2cc52c; --warn-bg: rgba(250, 178, 25, .16); --warn-ink: #fab219;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121417; --surface: #1a1d21; --ink: #eceef1; --ink-2: #b7bdc6; --muted: #8b929c;
+  --line: #2a2e34; --axis: #3b4048; --accent: #8db5ec; --chip-bg: rgba(141, 181, 236, .14); --shadow: rgba(0, 0, 0, .45);
+  --s-filing: #3987e5; --s-final: #d95926; --band: rgba(57, 135, 229, .13); --band-edge: rgba(57, 135, 229, .5);
+  --force-bg: rgba(57, 135, 229, .16);
+  --good-bg: rgba(12, 163, 12, .18); --good-ink: #2cc52c; --warn-bg: rgba(250, 178, 25, .16); --warn-ink: #fab219;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.55 var(--font-body); }
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; display: flex; flex-direction: column; gap: 28px; }
+@media (min-width: 700px) { .wrap { padding-inline: 28px; padding-block: 48px 72px; gap: 36px; } }
+.eyebrow { margin: 0 0 8px; font-size: 12px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-2); }
+h1 { margin: 0; font: 700 clamp(28px, 7vw, 38px)/1.12 var(--font-display); letter-spacing: -.01em; text-wrap: balance; }
+.sub { margin: 10px 0 0; font-size: 14px; color: var(--ink-2); }
+h2 { margin: 0; font: 600 16px/1.35 var(--font-body); text-wrap: balance; }
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 12px 16px; margin: 0; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field label { font-size: 12px; font-weight: 600; letter-spacing: .02em; color: var(--ink-2); }
+select, input[type="date"] { width: 100%; min-height: 42px; padding: 8px 10px; font: 400 15px/1.2 var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 6px; }
+input[type="date"] { font-family: var(--font-data); font-size: 14px; }
+
+.readout { display: flex; flex-direction: column; gap: 16px; padding: 18px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.ro-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.chip { padding: 6px 10px; border-radius: 999px; background: var(--chip-bg); color: var(--accent); font-size: 12px; font-weight: 500; line-height: 1; white-space: nowrap; }
+.chip:empty { display: none; }
+.ro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.ro-grid dt { margin: 0 0 6px; font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.ro-grid dd { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.ro-code { font: 500 22px/1.1 var(--font-data); letter-spacing: .03em; }
+.ro-note { font-size: 13px; line-height: 1.4; color: var(--ink-2); }
+.verdict { margin: 0; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-size: 14px; line-height: 1.5; }
+.verdict.muted { color: var(--ink-2); }
+.status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 8px; border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; align-self: center; }
+.status svg { width: 16px; height: 16px; flex: none; }
+.status.ok { background: var(--good-bg); color: var(--good-ink); }
+.status.wait { background: var(--warn-bg); color: var(--warn-ink); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 12px 0 10px; font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.k { display: inline-block; width: 20px; height: 0; border-top: 2px solid var(--s-filing); }
+.k-final { border-top: 2px dashed var(--s-final); }
+.k-band { width: 12px; height: 12px; border: 1px solid var(--band-edge); border-radius: 2px; background: var(--band); }
+.chart-box { position: relative; height: 260px; }
+@media (min-width: 700px) { .chart-box { height: 320px; } }
+.tip { position: absolute; z-index: 2; pointer-events: none; min-width: 200px; padding: 9px 11px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 4px 14px var(--shadow); font-size: 12px; line-height: 1.4; }
+.tip-head { margin-bottom: 6px; font-weight: 600; color: var(--ink); }
+.tip-row { display: flex; align-items: center; gap: 8px; margin-top: 3px; white-space: nowrap; }
+.tip-key { flex: none; width: 14px; height: 0; border-top: 2px solid var(--s-filing); }
+.tip-key.final { border-top-style: dashed; border-top-color: var(--s-final); }
+.tip-val { font: 500 13px/1.2 var(--font-data); color: var(--ink); }
+.tip-lag { min-width: 46px; color: var(--ink-2); }
+.tip-lab { color: var(--muted); }
+.tip-foot { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line); color: var(--ink-2); }
+.note, .fallback { margin: 12px 0 0; max-width: 65ch; font-size: 13px; color: var(--ink-2); }
+
+.table-wrap { margin-top: 10px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+caption { caption-side: top; padding-bottom: 10px; text-align: left; font-size: 13px; color: var(--ink-2); }
+thead th { padding: 8px 8px 6px; text-align: left; vertical-align: bottom; font-size: 12px; font-weight: 600; line-height: 1.3; color: var(--ink-2); border-bottom: 1px solid var(--axis); }
+tbody th, tbody td { padding: 7px 8px; text-align: left; font-weight: 400; vertical-align: top; border-bottom: 1px solid var(--line); }
+tbody th { white-space: nowrap; }
+tbody th a { color: var(--ink); text-decoration-color: var(--axis); }
+tr.fy-start > * { border-bottom-color: var(--axis); }
+.fy { display: block; font-size: 11px; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
+td .code { display: block; font: 400 13px/1.3 var(--font-data); letter-spacing: .02em; }
+td .lag { display: block; font-size: 11.5px; color: var(--muted); }
+td.in-force { background: var(--force-bg); }
+td.in-force .code { font-weight: 500; color: var(--ink); }
+td.uscis { color: var(--ink-2); }
+
+.sources { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-2); }
+.sources p { margin: 0; max-width: 72ch; }
+code { padding: 1px 5px; border-radius: 4px; background: var(--chip-bg); font: 400 12.5px var(--font-data); }
+.filebtn { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+#file:focus-visible + .filebtn { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.error { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; }
+.error p { margin: 0; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <p class="eyebrow">Employment-based green card queue</p>
+    <h1>Visa Bulletin Tracker</h1>
+    <p class="sub" id="coverage">Loading bulletins…</p>
+  </header>
+
+  <form class="controls" id="controls" aria-label="Choose a queue">
+    <div class="field"><label for="cat">Category</label><select id="cat"></select></div>
+    <div class="field"><label for="country">Country of chargeability</label><select id="country"></select></div>
+    <div class="field"><label for="pd">Your priority date</label><input type="date" id="pd"></div>
+  </form>
+
+  <section class="error" id="error" role="alert" hidden><p id="error-text"></p></section>
+
+  <section class="readout" id="readout" aria-live="polite">
+    <div class="ro-head"><h2 id="ro-month">Loading bulletins…</h2><span class="chip" id="ro-chart"></span></div>
+    <dl class="ro-grid">
+      <div><dt>I-485 filing cutoff</dt><dd><span class="ro-code" id="ro-file">—</span><span class="ro-note" id="ro-file-note"></span></dd></div>
+      <div><dt>Final action cutoff</dt><dd><span class="ro-code" id="ro-final">—</span><span class="ro-note" id="ro-final-note"></span></dd></div>
+    </dl>
+    <p class="verdict muted" id="ro-verdict"></p>
+  </section>
+
+  <section id="chart-sec" hidden>
+    <h2>How far behind the cutoffs ran</h2>
+    <div class="legend">
+      <span><i class="k"></i>Dates for filing</span>
+      <span><i class="k k-final"></i>Final action</span>
+      <span><i class="k k-band"></i>USCIS took Dates for Filing</span>
+    </div>
+    <div class="chart-box" id="chart-box">
+      <canvas id="chart" role="img" tabindex="0" aria-label="Line chart of cutoff lag by bulletin month">The table below lists every value in this chart.</canvas>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <p class="fallback" id="chart-fallback" hidden>The chart library didn't load. The table below has every value.</p>
+    <p class="note">Each line shows how many months a cutoff date trailed its bulletin; zero means current. In shaded months USCIS accepted I-485s under Dates for Filing, otherwise under Final Action. Use the arrow keys on the chart to step through months.</p>
+  </section>
+
+  <section id="table-sec" hidden>
+    <h2>All bulletins</h2>
+    <div class="table-wrap">
+      <table>
+        <caption id="table-caption"></caption>
+        <thead><tr><th scope="col">Bulletin</th><th scope="col">Final action</th><th scope="col">Dates for filing</th><th scope="col">USCIS used</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="sources">
+    <p>Cutoff dates come from the State Department's monthly Visa Bulletin; each month in the table links to its bulletin. The chart USCIS accepted for I-485 filings comes from its adjustment-of-status filing charts, linked per month. Showing <span id="data-name">data.json</span><span id="data-date"></span>. Confirm against the official bulletin before filing.</p>
+    <p>To show other data, keep a data.json next to this page, add <code>?data=</code> with a URL (that server must allow cross-origin requests), or <input type="file" id="file" class="sr-only" accept=".json,application/json"><label class="filebtn" for="file">open a JSON file</label> from your device.</p>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const MON = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  const MON_S = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const MON_L = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const CAT_ORDER = ['EB-1', 'EB-2', 'EB-3', 'EB-3 Other', 'EB-4', 'EB-4 Religious', 'EB-5 Unreserved', 'EB-5 Rural', 'EB-5 High Unemployment', 'EB-5 Infrastructure', 'EB-5 Set-Aside'];
+  const CAT_NAME = { 'EB-3 Other': 'EB-3 other workers', 'EB-4 Religious': 'EB-4 religious workers', 'EB-5 Unreserved': 'EB-5 unreserved', 'EB-5 Rural': 'EB-5 rural', 'EB-5 High Unemployment': 'EB-5 high unemployment', 'EB-5 Infrastructure': 'EB-5 infrastructure', 'EB-5 Set-Aside': 'EB-5 set-aside' };
+  const COUNTRY_ORDER = ['ROW', 'CN', 'IN', 'MX', 'PH'];
+  const COUNTRY_NAME = { ROW: 'All other countries', CN: 'China (mainland-born)', IN: 'India', MX: 'Mexico', PH: 'Philippines' };
+  const DAY = 864e5, MONTH = 30.436875;
+  const MONTH_RE = /^(\d{4})-(0[1-9]|1[0-2])$/;
+  const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+  const ICON_OK = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.2 8.3l1.9 1.9 3.8-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const ICON_WAIT = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.8V8l2.2 1.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  const params = new URLSearchParams(location.search);
+  const state = { data: null, cat: null, country: null, pd: '', s: null, active: null };
+  let chart = null;
+
+  const prefs = (() => { try { return JSON.parse(localStorage.getItem('vbt-prefs') || '{}') || {}; } catch (e) { return {}; } })();
+  const savePrefs = () => { try { localStorage.setItem('vbt-prefs', JSON.stringify({ cat: state.cat, country: state.country, pd: state.pd })); } catch (e) { /* storage blocked */ } };
+
+  const mParts = (m) => { const r = MONTH_RE.exec(m); return [+r[1], +r[2] - 1]; };
+  const mIndex = (m) => { const [y, mo] = mParts(m); return y * 12 + mo; };
+  const mFromIndex = (i) => `${Math.floor(i / 12)}-${String(i % 12 + 1).padStart(2, '0')}`;
+  const mStart = (m) => { const [y, mo] = mParts(m); return Date.UTC(y, mo, 1); };
+  const dTime = (d) => Date.parse(`${d}T00:00:00Z`);
+  const isDate = (v) => typeof v === 'string' && DATE_RE.test(v) && !Number.isNaN(dTime(v));
+  const fmtMonth = (m, style) => {
+    const [y, mo] = mParts(m);
+    if (style === 'long') return `${MON_L[mo]} ${y}`;
+    if (style === 'tick') return `${MON_S[mo]} ’${String(y).slice(2)}`;
+    return `${MON_S[mo]} ${y}`;
+  };
+  const fmtCode = (v) => (v === 'C' || v === 'U') ? v : isDate(v) ? `${v.slice(8, 10)}${MON[+v.slice(5, 7) - 1]}${v.slice(2, 4)}` : '—';
+  const fmtDate = (v) => `${+v.slice(8, 10)} ${MON_S[+v.slice(5, 7) - 1]} ${v.slice(0, 4)}`;
+  const lagOf = (m, v) => v === 'C' ? 0 : isDate(v) ? Math.max(0, (mStart(m) - dTime(v)) / DAY / MONTH) : null;
+  const fmtLag = (x) => x == null ? '' : x === 0 ? 'current' : x < 1 ? '<1 mo' : x < 36 ? `${Math.round(x)} mo` : `${(x / 12).toFixed(1)} yr`;
+  const fmtLagLong = (x) => {
+    if (x === 0) return 'current';
+    if (x < 1) return 'less than a month behind';
+    if (x < 36) { const k = Math.round(x); return `${k} month${k === 1 ? '' : 's'} behind`; }
+    return `${(x / 12).toFixed(1)} years behind`;
+  };
+  const fmtSpan = (ms) => {
+    const n = ms / DAY / MONTH;
+    if (n < 1) return 'less than a month';
+    if (n < 36) { const k = Math.round(n); return `${k} month${k === 1 ? '' : 's'}`; }
+    return `${(n / 12).toFixed(1)} years`;
+  };
+  const catName = (c) => CAT_NAME[c] || c;
+  const countryName = (c) => COUNTRY_NAME[c] || (state.data && state.data.countries && typeof state.data.countries[c] === 'string' ? state.data.countries[c] : c);
+  const safeUrl = (u) => {
+    if (typeof u !== 'string' || !u) return null;
+    try { const x = new URL(u, location.href); return (x.protocol === 'https:' || x.protocol === 'http:') ? x.href : null; } catch (e) { return null; }
+  };
+  const cutoff = (b, table) => {
+    const t = b && b[table];
+    const row = t && typeof t === 'object' ? t[state.cat] : null;
+    const v = row && typeof row === 'object' ? row[state.country] : null;
+    return typeof v === 'string' ? v : null;
+  };
+  const uscisOf = (b) => (b && (b.uscis_chart === 'filing' || b.uscis_chart === 'final')) ? b.uscis_chart : null;
+  const lastBulletin = () => state.data.bulletins[state.data.bulletins.length - 1];
+
+  function validate(json) {
+    if (!json || typeof json !== 'object' || !Array.isArray(json.bulletins)) throw new Error('it has no "bulletins" list');
+    const seen = new Set();
+    for (const b of json.bulletins) {
+      if (!b || typeof b.month !== 'string' || !MONTH_RE.test(b.month)) throw new Error(`a bulletin has month ${JSON.stringify(b && b.month)}, expected YYYY-MM`);
+      if (seen.has(b.month)) throw new Error(`${b.month} appears twice`);
+      seen.add(b.month);
+    }
+    if (!seen.size) throw new Error('its "bulletins" list is empty');
+    return Object.assign({}, json, { bulletins: json.bulletins.slice().sort((a, b) => (a.month < b.month ? -1 : 1)) });
+  }
+
+  const ordered = (set, order) => [...order.filter((k) => set.has(k)), ...[...set].filter((k) => !order.includes(k)).sort()];
+
+  function fillSelect(sel, keys, nameFn, chosen) {
+    sel.replaceChildren(...keys.map((k) => { const o = document.createElement('option'); o.value = k; o.textContent = nameFn(k); return o; }));
+    sel.value = chosen;
+  }
+
+  function setData(json, label, href) {
+    const data = validate(json);
+    const cats = new Set(), countries = new Set();
+    for (const b of data.bulletins) {
+      for (const t of ['final', 'filing']) {
+        const tab = b[t];
+        if (!tab || typeof tab !== 'object') continue;
+        for (const [c, row] of Object.entries(tab)) {
+          if (!row || typeof row !== 'object') continue;
+          cats.add(c);
+          Object.keys(row).forEach((k) => countries.add(k));
+        }
+      }
+    }
+    const catList = ordered(cats, CAT_ORDER), ctyList = ordered(countries, COUNTRY_ORDER);
+    if (!catList.length || !ctyList.length) throw new Error('it has no cutoff tables');
+    state.data = data;
+    const pick = (list, ...cands) => cands.find((c) => c && list.includes(c)) || list[0];
+    state.cat = pick(catList, state.cat, params.get('category'), prefs.cat, 'EB-2');
+    state.country = pick(ctyList, state.country, params.get('country'), prefs.country, 'ROW');
+    state.active = null;
+    fillSelect($('cat'), catList, catName, state.cat);
+    fillSelect($('country'), ctyList, countryName, state.country);
+
+    const name = $('data-name');
+    name.replaceChildren();
+    const url = href ? safeUrl(href) : null;
+    if (url) { const a = document.createElement('a'); a.href = url; a.textContent = label; name.append(a); } else name.textContent = label;
+    $('data-date').textContent = isDate(data.generated) ? `, generated ${fmtDate(data.generated)}` : '';
+
+    $('error').hidden = true;
+    ['readout', 'chart-sec', 'table-sec'].forEach((id) => { $(id).hidden = false; });
+    render();
+  }
+
+  function render() {
+    const bs = state.data.bulletins;
+    $('coverage').textContent = `${bs.length} bulletin${bs.length === 1 ? '' : 's'}, ${fmtMonth(bs[0].month)} to ${fmtMonth(bs[bs.length - 1].month)}`;
+    state.s = buildSeries();
+    renderReadout();
+    renderChart();
+    renderTable();
+  }
+
+  function buildSeries() {
+    const bs = state.data.bulletins, by = new Map(bs.map((b) => [b.month, b]));
+    const s = { months: [], filing: [], final: [], uscis: [], rows: [] };
+    for (let i = mIndex(bs[0].month), end = mIndex(bs[bs.length - 1].month); i <= end; i++) {
+      const m = mFromIndex(i), b = by.get(m) || null;
+      const df = cutoff(b, 'filing'), fa = cutoff(b, 'final');
+      s.months.push(m);
+      s.filing.push(lagOf(m, df));
+      s.final.push(lagOf(m, fa));
+      s.uscis.push(uscisOf(b));
+      s.rows.push(b ? { b, df, fa } : null);
+    }
+    return s;
+  }
+
+  function describe(m, v) {
+    if (v === 'C') return 'Current: every priority date qualifies';
+    if (v === 'U') return 'Unavailable this month';
+    if (isDate(v)) return `${fmtDate(v)} · ${fmtLagLong(lagOf(m, v))}`;
+    return 'Not listed for this queue';
+  }
+
+  function renderReadout() {
+    const b = lastBulletin(), m = b.month;
+    const fa = cutoff(b, 'final'), df = cutoff(b, 'filing'), uc = uscisOf(b);
+    const fileV = uc === 'filing' ? df : uc === 'final' ? fa : null;
+    $('ro-month').textContent = `${fmtMonth(m, 'long')} bulletin`;
+    $('ro-chart').textContent = uc === 'filing' ? 'USCIS takes Dates for Filing' : uc === 'final' ? 'USCIS takes Final Action dates' : 'USCIS chart not recorded';
+    $('ro-file').textContent = fmtCode(fileV);
+    $('ro-file-note').textContent = uc ? describe(m, fileV) : 'Depends on the chart USCIS picks';
+    $('ro-final').textContent = fmtCode(fa);
+    $('ro-final-note').textContent = describe(m, fa);
+
+    const out = $('ro-verdict');
+    out.replaceChildren();
+    const pd = state.pd;
+    if (!pd) { out.className = 'verdict muted'; out.textContent = 'Enter your priority date above to check it against this bulletin.'; return; }
+    out.className = 'verdict';
+    let status = null, label = '', text = '';
+    const fileOK = fileV === 'C' || (isDate(fileV) && pd < fileV);
+    const faOK = fa === 'C' || (isDate(fa) && pd < fa);
+    if (!uc) {
+      text = `The data doesn't say which chart USCIS took for ${fmtMonth(m, 'long')}, so filing can't be checked.`;
+    } else if (fileV === 'U') {
+      status = 'wait'; label = 'Unavailable'; text = 'No visa numbers are available in this queue this month.';
+    } else if (fileV == null) {
+      text = 'This bulletin lists no cutoff for this queue.';
+    } else if (fileOK) {
+      status = 'ok'; label = 'Can file';
+      text = fileV === 'C' ? 'Filing is current in this queue.' : `Your date is earlier than the ${fmtDate(fileV)} filing cutoff.`;
+      if (faOK) text += ' It is current for final action too.';
+      else if (isDate(fa)) text += ` Final action still has ${fmtSpan(dTime(pd) - dTime(fa))} to go (cutoff ${fmtDate(fa)}).`;
+    } else {
+      status = 'wait'; label = 'Not yet';
+      text = `The filing cutoff, ${fmtDate(fileV)}, is ${fmtSpan(dTime(pd) - dTime(fileV))} short of your ${fmtDate(pd)} date.`;
+    }
+    if (status) {
+      const pill = document.createElement('span');
+      pill.className = `status ${status}`;
+      pill.innerHTML = status === 'ok' ? ICON_OK : ICON_WAIT;
+      pill.append(label);
+      out.append(pill);
+    }
+    const t = document.createElement('span');
+    t.textContent = text;
+    out.append(t);
+  }
+
+  const tok = (css, n) => css.getPropertyValue(n).trim();
+  function niceScale(max) {
+    if (max <= 36) return { step: 6, max: Math.max(12, Math.ceil(max / 6) * 6), years: false };
+    const yrs = Math.ceil(max / 12), sy = Math.max(1, Math.ceil(yrs / 6));
+    return { step: sy * 12, max: Math.ceil(yrs / sy) * sy * 12, years: true };
+  }
+  const lastIndex = (a) => { for (let i = a.length - 1; i >= 0; i--) if (a[i] != null) return i; return -1; };
+  function tickLabel(i) {
+    const s = state.s, m = s.months[i];
+    if (!m) return '';
+    const mo = +m.slice(5, 7);
+    if (s.months.length <= 18) return (mo - 1) % 3 === 0 ? fmtMonth(m, 'tick') : '';
+    return mo === 10 ? fmtMonth(m, 'tick') : '';
+  }
+
+  function renderChart() {
+    const box = $('chart-box'), canvas = $('chart');
+    if (typeof window.Chart === 'undefined') { $('chart-fallback').hidden = false; box.hidden = true; return; }
+    $('chart-fallback').hidden = true;
+    box.hidden = false;
+    $('tip').hidden = true;
+    const s = state.s, css = getComputedStyle(document.documentElement);
+    const C = { filing: tok(css, '--s-filing'), final: tok(css, '--s-final'), band: tok(css, '--band'), grid: tok(css, '--line'), axis: tok(css, '--axis'), muted: tok(css, '--muted'), ink2: tok(css, '--ink-2'), bg: tok(css, '--bg') };
+    const family = getComputedStyle(document.body).fontFamily;
+    Chart.defaults.font.family = family;
+    const vals = s.filing.concat(s.final).filter((v) => v != null);
+    const sc = niceScale(vals.length ? Math.max(...vals) : 0);
+    const lf = lastIndex(s.filing), la = lastIndex(s.final);
+
+    const bands = {
+      id: 'bands',
+      beforeDatasetsDraw(ch) {
+        const { ctx, chartArea: a, scales: { x } } = ch, n = s.months.length;
+        if (!n) return;
+        const step = n > 1 ? x.getPixelForValue(1) - x.getPixelForValue(0) : a.right - a.left;
+        ctx.save();
+        ctx.fillStyle = C.band;
+        for (let i = 0; i < n; i++) {
+          if (s.uscis[i] !== 'filing') continue;
+          let j = i;
+          while (j + 1 < n && s.uscis[j + 1] === 'filing') j++;
+          const x0 = Math.max(a.left, x.getPixelForValue(i) - step / 2), x1 = Math.min(a.right, x.getPixelForValue(j) + step / 2);
+          ctx.fillRect(x0, a.top, x1 - x0, a.bottom - a.top);
+          i = j;
+        }
+        ctx.restore();
+      }
+    };
+    const cross = {
+      id: 'cross',
+      beforeDatasetsDraw(ch) {
+        const act = ch.tooltip ? ch.tooltip.getActiveElements() : [];
+        if (!act.length) return;
+        const a = ch.chartArea, ctx = ch.ctx, px = Math.round(act[0].element.x) + 0.5;
+        ctx.save();
+        ctx.strokeStyle = C.muted;
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke();
+        ctx.restore();
+      }
+    };
+    const endLabels = {
+      id: 'endLabels',
+      afterDatasetsDraw(ch) {
+        const ctx = ch.ctx, a = ch.chartArea, items = [];
+        [['Filing', 0, lf], ['Final', 1, la]].forEach(([name, di, idx]) => {
+          if (idx < 0) return;
+          const p = ch.getDatasetMeta(di).data[idx];
+          if (p) items.push({ x: p.x, y: p.y, text: `${name} · ${fmtLag(ch.data.datasets[di].data[idx])}` });
+        });
+        items.sort((p, q) => q.y - p.y);
+        ctx.save();
+        ctx.font = `500 11px ${family}`;
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'bottom';
+        ctx.lineJoin = 'round';
+        let ceiling = Infinity;
+        for (const it of items) {
+          const base = Math.max(Math.min(it.y - 7, ceiling - 2), a.top - 4);
+          ceiling = base - 12;
+          ctx.lineWidth = 4; ctx.strokeStyle = C.bg; ctx.strokeText(it.text, it.x - 8, base);
+          ctx.fillStyle = C.ink2; ctx.fillText(it.text, it.x - 8, base);
+        }
+        ctx.restore();
+      }
+    };
+
+    function tip(context) {
+      const t = context.tooltip, el = $('tip');
+      if (!t || t.opacity === 0 || !t.dataPoints || !t.dataPoints.length) { el.hidden = true; return; }
+      const i = t.dataPoints[0].dataIndex, m = s.months[i], r = s.rows[i];
+      state.active = i;
+      el.replaceChildren();
+      const head = document.createElement('div');
+      head.className = 'tip-head';
+      head.textContent = `${fmtMonth(m, 'long')} bulletin`;
+      el.append(head);
+      if (r) {
+        for (const [label, v, cls] of [['Dates for filing', r.df, 'filing'], ['Final action', r.fa, 'final']]) {
+          const row = document.createElement('div'); row.className = 'tip-row';
+          const key = document.createElement('span'); key.className = `tip-key ${cls}`;
+          const val = document.createElement('span'); val.className = 'tip-val'; val.textContent = fmtCode(v);
+          const lg = document.createElement('span'); lg.className = 'tip-lag'; lg.textContent = v === 'U' ? 'unavailable' : fmtLag(lagOf(m, v));
+          const lab = document.createElement('span'); lab.className = 'tip-lab'; lab.textContent = label;
+          row.append(key, val, lg, lab);
+          el.append(row);
+        }
+      }
+      const u = r ? uscisOf(r.b) : null, foot = document.createElement('div');
+      foot.className = 'tip-foot';
+      foot.textContent = !r ? 'No bulletin in the data' : u === 'filing' ? 'USCIS took Dates for Filing' : u === 'final' ? 'USCIS took Final Action dates' : 'USCIS chart not recorded';
+      el.append(foot);
+      el.hidden = false;
+      const bw = box.clientWidth, tw = el.offsetWidth, x = t.caretX;
+      let left = x + 14;
+      if (left + tw > bw) left = x - 14 - tw;
+      left = Math.max(0, Math.min(left, bw - tw));
+      el.style.left = `${left}px`;
+      el.style.top = `${context.chart.chartArea.top}px`;
+    }
+
+    const line = (label, data, color, last, extra) => Object.assign({
+      label, data, borderColor: color, backgroundColor: color, borderWidth: 2, borderCapStyle: 'round', borderJoinStyle: 'round', tension: 0, spanGaps: false,
+      pointRadius: (c) => (c.dataIndex === last ? 4 : 0), pointBackgroundColor: color, pointBorderColor: C.bg, pointBorderWidth: 2,
+      pointHoverRadius: 5, pointHoverBackgroundColor: color, pointHoverBorderColor: C.bg, pointHoverBorderWidth: 2, pointHitRadius: 12
+    }, extra);
+
+    if (chart) chart.destroy();
+    chart = new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: s.months,
+        datasets: [
+          line('Dates for filing', s.filing, C.filing, lf, { order: 0 }),
+          line('Final action', s.final, C.final, la, { order: 1, borderDash: [6, 4] })
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        interaction: { mode: 'index', intersect: false },
+        layout: { padding: { top: 22, right: 4 } },
+        plugins: { legend: { display: false }, tooltip: { enabled: false, external: tip } },
+        scales: {
+          x: { grid: { display: false }, border: { color: C.axis }, ticks: { color: C.muted, autoSkip: false, maxRotation: 0, font: { size: 11 }, callback: (v, i) => tickLabel(i) } },
+          y: { min: 0, max: sc.max, grid: { color: C.grid }, border: { display: false }, ticks: { stepSize: sc.step, color: C.muted, font: { size: 11 }, padding: 6, callback: (v) => (v === 0 ? 'Current' : sc.years ? `${v / 12} yr` : `${v} mo`) } }
+        }
+      },
+      plugins: [bands, cross, endLabels]
+    });
+
+    const first = s.months[0], last = s.months[s.months.length - 1];
+    canvas.setAttribute('aria-label', `Line chart of how many months the ${catName(state.cat)} cutoffs for ${countryName(state.country)} trailed each bulletin, ${fmtMonth(first)} to ${fmtMonth(last)}. Latest: dates for filing ${fmtLag(s.filing[lf]) || 'not listed'}, final action ${fmtLag(s.final[la]) || 'not listed'}. The table below lists every value.`);
+  }
+
+  function setActive(i) {
+    if (!chart || !state.s) return;
+    const n = state.s.months.length;
+    i = Math.max(0, Math.min(n - 1, i));
+    state.active = i;
+    const els = chart.data.datasets.map((d, di) => ({ datasetIndex: di, index: i })).filter((e) => chart.data.datasets[e.datasetIndex].data[i] != null);
+    if (!els.length) { clearActive(); return; }
+    const p = chart.getDatasetMeta(els[0].datasetIndex).data[i];
+    chart.setActiveElements(els);
+    chart.tooltip.setActiveElements(els, { x: p.x, y: p.y });
+    chart.update('none');
+  }
+  function clearActive() {
+    if (!chart) return;
+    chart.setActiveElements([]);
+    chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+    chart.update('none');
+    $('tip').hidden = true;
+  }
+
+  function cell(m, v, inForce) {
+    const td = document.createElement('td');
+    if (inForce) td.className = 'in-force';
+    const c = document.createElement('span'); c.className = 'code'; c.textContent = fmtCode(v);
+    const l = document.createElement('span'); l.className = 'lag'; l.textContent = v === 'U' ? 'unavailable' : v ? fmtLag(lagOf(m, v)) : '';
+    td.append(c, l);
+    return td;
+  }
+  const link = (href, text) => { const a = document.createElement('a'); a.href = href; a.target = '_blank'; a.rel = 'noopener'; a.textContent = text; return a; };
+
+  function renderTable() {
+    $('table-caption').textContent = `${catName(state.cat)}, ${countryName(state.country)}. Shaded cells mark the chart USCIS accepted for I-485 filings that month.`;
+    const body = $('rows');
+    body.replaceChildren();
+    for (const b of state.data.bulletins.slice().reverse()) {
+      const m = b.month, fa = cutoff(b, 'final'), df = cutoff(b, 'filing'), uc = uscisOf(b), oct = m.endsWith('-10');
+      const tr = document.createElement('tr');
+      if (oct) tr.className = 'fy-start';
+      const th = document.createElement('th');
+      th.scope = 'row';
+      const url = safeUrl(b.url);
+      if (url) th.append(link(url, fmtMonth(m))); else th.textContent = fmtMonth(m);
+      if (oct) { const fy = document.createElement('span'); fy.className = 'fy'; fy.textContent = `FY${String(+m.slice(0, 4) + 1).slice(2)}`; th.append(fy); }
+      const ut = document.createElement('td');
+      ut.className = 'uscis';
+      const uText = uc === 'filing' ? 'Filing' : uc === 'final' ? 'Final' : '—';
+      const su = uc ? safeUrl(b.uscis_source) : null;
+      if (su) ut.append(link(su, uText)); else ut.textContent = uText;
+      tr.append(th, cell(m, fa, uc === 'final'), cell(m, df, uc === 'filing'), ut);
+      body.append(tr);
+    }
+  }
+
+  function showError(msg) {
+    $('error-text').textContent = msg;
+    $('error').hidden = false;
+    ['readout', 'chart-sec', 'table-sec'].forEach((id) => { $(id).hidden = true; });
+    $('coverage').textContent = 'No bulletins loaded';
+  }
+
+  async function boot() {
+    const src = params.get('data') || 'data.json';
+    try {
+      const res = await fetch(src, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`the server answered ${res.status}`);
+      let json;
+      try { json = await res.json(); } catch (e) { throw new Error('it is not valid JSON'); }
+      setData(json, src.split(/[?#]/)[0].split('/').pop() || src, src);
+    } catch (e) {
+      showError(`Couldn't load ${src}: ${e.message}. Keep data.json next to this page, add ?data= with a URL, or open a JSON file below.`);
+    }
+  }
+
+  $('controls').addEventListener('submit', (e) => e.preventDefault());
+  $('cat').addEventListener('change', (e) => { state.cat = e.target.value; state.active = null; savePrefs(); render(); });
+  $('country').addEventListener('change', (e) => { state.country = e.target.value; state.active = null; savePrefs(); render(); });
+  const onPd = (e) => { const v = e.target.value; state.pd = isDate(v) ? v : ''; savePrefs(); if (state.data) renderReadout(); };
+  $('pd').addEventListener('change', onPd);
+  $('pd').addEventListener('input', onPd);
+  $('file').addEventListener('change', async (e) => {
+    const f = e.target.files && e.target.files[0];
+    if (!f) return;
+    try { setData(JSON.parse(await f.text()), f.name, null); } catch (err) { showError(`Couldn't read ${f.name}: ${err instanceof SyntaxError ? 'it is not valid JSON' : err.message}.`); }
+    e.target.value = '';
+  });
+
+  const canvas = $('chart');
+  canvas.addEventListener('keydown', (e) => {
+    const n = state.s ? state.s.months.length : 0;
+    if (!n) return;
+    const cur = state.active == null ? n - 1 : state.active;
+    const next = { ArrowLeft: cur - 1, ArrowRight: cur + 1, Home: 0, End: n - 1 }[e.key];
+    if (next === undefined) return;
+    e.preventDefault();
+    setActive(next);
+  });
+  canvas.addEventListener('focus', () => { if (state.s) setActive(state.active == null ? state.s.months.length - 1 : state.active); });
+  canvas.addEventListener('blur', clearActive);
+
+  const rerenderChart = () => { if (state.data) renderChart(); };
+  try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', rerenderChart); } catch (e) { /* old browser */ }
+  new MutationObserver(rerenderChart).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(rerenderChart);
+
+  const pd0 = params.get('pd') || prefs.pd;
+  if (isDate(pd0)) { state.pd = pd0; $('pd').value = pd0; }
+  boot();
+})();
+</script>
+</body>
+</html>

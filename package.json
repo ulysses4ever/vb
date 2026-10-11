@@ -1,0 +1,14 @@
+{
+  "name": "visa-bulletin-tracker",
+  "private": true,
+  "type": "module",
+  "description": "Static page charting U.S. Visa Bulletin employment-based cutoffs from data.json",
+  "scripts": {
+    "build:data": "python3 tools/build_data.py",
+    "test": "node tools/test.mjs"
+  },
+  "devDependencies": {
+    "chart.js": "4.4.1",
+    "puppeteer": "^23.11.1"
+  }
+}
