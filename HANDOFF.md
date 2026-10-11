@@ -22,6 +22,8 @@ No build step and no backend. Chart.js 4.4.1 loads from cdnjs; fonts load from G
   MX and PH, in both charts. USCIS's chart choice is recorded for all 49 months (23 Dates for Filing,
   26 Final Action). The November 2026 bulletin was not yet published on 2026-10-11.
 - **Page:** finished; 8 headless checks pass (`npm test`).
+- **Hosting:** live at https://ulysses4ever.github.io/vb/ (repo `ulysses4ever/vb`). The workflow
+  `.github/workflows/pages.yml` publishes `site/` to GitHub Pages on every push to `main`.
 - **Not done:** automatic monthly updates. See "Next steps".
 
 ## Layout
@@ -34,6 +36,7 @@ data/uscis_chart.json          USCIS chart per month, with a source URL
 tools/build_data.py            validates data/ and writes site/data.json
 tools/test.mjs                 headless checks; serves site/ itself
 package.json                   npm scripts and test dependencies
+.github/workflows/pages.yml    publishes site/ to GitHub Pages on push to main
 ```
 
 ## Commands
@@ -152,9 +155,7 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
      bulletin page.
    - uscis.gov refused automated fetches during the session. Expect bot protection there and keep a
      fallback, such as recording the chart by hand from the page.
-2. **Hosting.** GitHub Pages (serving `site/`) or any static host. Keep `data.json` next to `index.html`
-   unless `?data=` points elsewhere.
-3. **Optional.** A notice when a configured priority date becomes fileable under the chart USCIS
+2. **Optional.** A notice when a configured priority date becomes fileable under the chart USCIS
    accepts; a backfill to October 2015, when the Dates for Filing chart began; family-based tables.
 
 ## Gotchas
