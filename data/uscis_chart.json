@@ -1,4 +1,340 @@
 {
+ "2015-10": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20151015185458/http://www.uscis.gov/visabulletininfo"
+ },
+ "2015-11": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20151106013334/http://www.uscis.gov/visabulletininfo"
+ },
+ "2015-12": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160219234854/https://www.uscis.gov/visabulletin-dec-15"
+ },
+ "2016-01": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160219234855/https://www.uscis.gov/visabulletin-jan-16"
+ },
+ "2016-02": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160219234848/https://www.uscis.gov/visabulletin-feb-16"
+ },
+ "2016-03": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160219184508/https://www.uscis.gov/visabulletininfo"
+ },
+ "2016-04": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160415012630/https://www.uscis.gov/visabulletin-apr-16"
+ },
+ "2016-05": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160420225957/https://www.uscis.gov/visabulletininfo"
+ },
+ "2016-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160519171911/https://www.uscis.gov/visabulletininfo"
+ },
+ "2016-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160624155558/https://www.uscis.gov/visabulletin-jul-16"
+ },
+ "2016-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160818230233/https://www.uscis.gov/visabulletin-aug-16"
+ },
+ "2016-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20160907210527/https://www.uscis.gov/visabulletininfo"
+ },
+ "2016-10": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20161014190223/https://www.uscis.gov/visabulletininfo"
+ },
+ "2016-11": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20161121201420/https://www.uscis.gov/visabulletininfo"
+ },
+ "2016-12": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20161121201420/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-01": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170209214335/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-02": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170209214335/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-03": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170323143810/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-04": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170429182311/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-05": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170429182311/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170609094711/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170710061146/https://www.uscis.gov/visabulletin-Jul-2017"
+ },
+ "2017-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170824142710/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20170824142710/https://www.uscis.gov/visabulletininfo"
+ },
+ "2017-10": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180221194645/https://www.uscis.gov/visabulletin-oct-17"
+ },
+ "2017-11": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20171214145502/https://www.uscis.gov/visabulletin-nov-17"
+ },
+ "2017-12": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20171223051807/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-01": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20171223051807/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-02": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180221171931/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-03": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180221171931/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-04": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180827163404/https://www.uscis.gov/visabulletin-apr-18"
+ },
+ "2018-05": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180827163410/https://www.uscis.gov/visabulletin-may-18"
+ },
+ "2018-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180705055836/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180705055836/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180827131238/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20180827131238/https://www.uscis.gov/visabulletininfo"
+ },
+ "2018-10": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20181224014709/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-october-2018"
+ },
+ "2018-11": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20190110105255/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-november-2018"
+ },
+ "2018-12": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20181203181025/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-01": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20190222203930/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-january-2019"
+ },
+ "2019-02": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190222144226/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-03": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190222144226/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-04": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190411143926/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-05": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190717124535/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-may-2019"
+ },
+ "2019-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190620035516/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190723025254/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190824072351/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20190929103239/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-10": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20191014213829/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-11": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20191121221827/https://www.uscis.gov/visabulletininfo"
+ },
+ "2019-12": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20191207113259/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-december-2019"
+ },
+ "2020-01": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20200811034818/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-to-file-your-adjustment-of-status-application-for-family-sponsored-or-employment-based-47"
+ },
+ "2020-02": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20200213065629/https://www.uscis.gov/visabulletininfo"
+ },
+ "2020-03": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20200315120737/https://www.uscis.gov/visabulletininfo"
+ },
+ "2020-04": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20200426183531/https://www.uscis.gov/visabulletininfo"
+ },
+ "2020-05": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20200502050032/https://www.uscis.gov/visabulletininfo"
+ },
+ "2020-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20200616165429/https://www.uscis.gov/visabulletininfo"
+ },
+ "2020-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20200706235533/https://www.uscis.gov/visabulletininfo"
+ },
+ "2020-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20200820175331/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2020-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20200930040426/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2020-10": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20201028063612/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2020-11": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20201117131045/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2020-12": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20201218051034/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-01": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210122042437/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-02": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210224155350/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-03": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210322195133/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-04": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210429225201/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-05": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210525140659/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210625061240/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210721153653/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210820183422/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20210924154246/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-10": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20211022075250/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-11": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20211129041718/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2021-12": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20211218135017/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-01": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20220125222701/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-02": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20220218085149/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-03": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20220323232619/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-04": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20220416011006/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-05": {
+  "chart": "filing",
+  "source": "https://web.archive.org/web/20220531023623/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-06": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20220604094059/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-07": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20220716105106/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-08": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20220808111206/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
+ "2022-09": {
+  "chart": "final",
+  "source": "https://web.archive.org/web/20220928002705/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
+ },
  "2022-10": {
   "chart": "filing",
   "source": "https://www.aila.org/library/adjustment-of-status-filing-dates-for-october-2022"

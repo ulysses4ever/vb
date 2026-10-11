@@ -14,6 +14,2210 @@
  },
  "bulletins": [
   {
+   "month": "2015-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-october-2015.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20151015185458/http://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-01-01", "IN": "2005-05-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-08-15", "CN": "2011-10-15", "IN": "2004-03-08", "MX": "2015-08-15", "PH": "2007-01-01"},
+    "EB-3 Other": {"ROW": "2015-08-15", "CN": "2006-01-01", "IN": "2004-03-08", "MX": "2015-08-15", "PH": "2007-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2013-10-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-01-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-09-01", "CN": "2013-10-01", "IN": "2005-07-01", "MX": "2015-09-01", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "2015-09-01", "CN": "2007-01-01", "IN": "2005-07-01", "MX": "2015-09-01", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2015-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-november-2015.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20151106013334/http://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-02-01", "IN": "2006-08-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-08-15", "CN": "2012-01-01", "IN": "2004-04-01", "MX": "2015-08-15", "PH": "2007-06-15"},
+    "EB-3 Other": {"ROW": "2015-08-15", "CN": "2006-04-01", "IN": "2004-04-01", "MX": "2015-08-15", "PH": "2007-06-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2013-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2013-11-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-01-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-09-01", "CN": "2013-10-01", "IN": "2005-07-01", "MX": "2015-09-01", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "2015-09-01", "CN": "2007-01-01", "IN": "2005-07-01", "MX": "2015-09-01", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2015-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-december-2015.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160219234854/https://www.uscis.gov/visabulletin-dec-15",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-02-01", "IN": "2007-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-09-01", "CN": "2012-04-15", "IN": "2004-04-22", "MX": "2015-09-01", "PH": "2007-08-01"},
+    "EB-3 Other": {"ROW": "2015-09-01", "CN": "2006-08-01", "IN": "2004-04-22", "MX": "2015-09-01", "PH": "2007-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2013-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2013-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-01-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-09-01", "CN": "2013-10-01", "IN": "2005-07-01", "MX": "2015-09-01", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "2015-09-01", "CN": "2007-01-01", "IN": "2005-07-01", "MX": "2015-09-01", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-january-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160219234855/https://www.uscis.gov/visabulletin-jan-16",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-02-01", "IN": "2008-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-10-01", "CN": "2012-07-01", "IN": "2004-05-15", "MX": "2015-10-01", "PH": "2007-11-01"},
+    "EB-3 Other": {"ROW": "2015-10-01", "CN": "2006-12-01", "IN": "2004-05-15", "MX": "2015-10-01", "PH": "2007-11-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-01-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-01-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-01-01", "CN": "2013-10-01", "IN": "2005-07-01", "MX": "2016-01-01", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "2016-01-01", "CN": "2007-01-01", "IN": "2005-07-01", "MX": "2016-01-01", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-february-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160219234848/https://www.uscis.gov/visabulletin-feb-16",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-03-01", "IN": "2008-08-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2015-10-01", "CN": "2012-10-01", "IN": "2004-06-15", "MX": "2015-10-01", "PH": "2008-01-08"},
+    "EB-3 Other": {"ROW": "2015-10-01", "CN": "2006-12-22", "IN": "2004-06-15", "MX": "2015-10-01", "PH": "2008-01-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-01-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-01-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-01-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-01-01", "CN": "2013-10-01", "IN": "2005-07-01", "MX": "2016-01-01", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "2016-01-01", "CN": "2007-01-01", "IN": "2005-07-01", "MX": "2016-01-01", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-march-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160219184508/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-08-01", "IN": "2008-10-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-01-01", "CN": "2013-06-01", "IN": "2004-07-15", "MX": "2016-01-01", "PH": "2008-03-15"},
+    "EB-3 Other": {"ROW": "2016-01-01", "CN": "2007-02-01", "IN": "2004-07-15", "MX": "2016-01-01", "PH": "2008-03-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-01-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-01-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-april-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160415012630/https://www.uscis.gov/visabulletin-apr-16",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-09-01", "IN": "2008-11-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-02-15", "CN": "2013-08-15", "IN": "2004-08-08", "MX": "2016-02-15", "PH": "2008-05-01"},
+    "EB-3 Other": {"ROW": "2016-02-15", "CN": "2007-03-01", "IN": "2004-08-08", "MX": "2016-02-15", "PH": "2008-05-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-02-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-may-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160420225957/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-09-01", "IN": "2008-11-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-02-15", "CN": "2013-08-15", "IN": "2004-09-01", "MX": "2016-02-15", "PH": "2008-08-08"},
+    "EB-3 Other": {"ROW": "2016-02-15", "CN": "2007-04-22", "IN": "2004-09-01", "MX": "2016-02-15", "PH": "2008-08-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-02-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-04-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-june-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160519171911/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2010-01-01", "IN": "2004-10-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-02-15", "CN": "2010-01-01", "IN": "2004-09-22", "MX": "2016-02-15", "PH": "2008-11-01"},
+    "EB-3 Other": {"ROW": "2016-02-15", "CN": "2007-04-22", "IN": "2004-09-22", "MX": "2016-02-15", "PH": "2008-11-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-july-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160624155558/https://www.uscis.gov/visabulletin-jul-16",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2010-01-01", "IN": "2004-11-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-03-01", "CN": "2010-01-01", "IN": "2004-10-22", "MX": "2016-03-01", "PH": "2009-02-15"},
+    "EB-3 Other": {"ROW": "2016-03-01", "CN": "2004-01-01", "IN": "2004-10-22", "MX": "2016-03-01", "PH": "2009-02-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2010-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2010-01-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2010-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-august-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160818230233/https://www.uscis.gov/visabulletin-aug-16",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2010-01-01", "IN": "2010-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "2014-02-01", "CN": "2010-01-01", "IN": "2004-11-15", "MX": "2014-02-01", "PH": "2014-02-01"},
+    "EB-3": {"ROW": "2016-03-15", "CN": "2010-01-01", "IN": "2004-11-08", "MX": "2016-03-15", "PH": "2009-05-15"},
+    "EB-3 Other": {"ROW": "2016-03-15", "CN": "2004-01-01", "IN": "2004-11-08", "MX": "2016-03-15", "PH": "2009-05-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2010-01-01", "MX": "2010-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2010-01-01", "MX": "2010-01-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2016/visa-bulletin-for-september-2016.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20160907210527/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2010-01-01", "IN": "2010-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "2014-02-01", "CN": "2010-01-01", "IN": "2005-02-22", "MX": "2014-02-01", "PH": "2014-02-01"},
+    "EB-3": {"ROW": "2016-05-01", "CN": "2010-01-01", "IN": "2005-02-15", "MX": "2016-05-01", "PH": "2010-07-01"},
+    "EB-3 Other": {"ROW": "2016-05-01", "CN": "2004-01-01", "IN": "2005-02-15", "MX": "2016-05-01", "PH": "2010-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2010-01-01", "MX": "2010-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2010-01-01", "MX": "2010-01-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-02-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-october-2016.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20161014190223/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-02-15", "IN": "2007-01-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-06-01", "CN": "2013-01-22", "IN": "2005-03-01", "MX": "2016-06-01", "PH": "2010-12-01"},
+    "EB-3 Other": {"ROW": "2016-06-01", "CN": "2005-01-01", "IN": "2005-03-01", "MX": "2016-06-01", "PH": "2010-12-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-02-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-november-2016.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20161121201420/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-07-15", "IN": "2007-11-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-07-01", "CN": "2013-04-15", "IN": "2005-03-08", "MX": "2016-07-01", "PH": "2011-04-01"},
+    "EB-3 Other": {"ROW": "2016-07-01", "CN": "2005-09-01", "IN": "2005-03-08", "MX": "2016-07-01", "PH": "2011-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-03-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-03-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2016-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-december-2016.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20161121201420/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-09-22", "IN": "2008-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-07-01", "CN": "2013-07-01", "IN": "2005-03-15", "MX": "2016-07-01", "PH": "2011-06-01"},
+    "EB-3 Other": {"ROW": "2016-07-01", "CN": "2005-11-01", "IN": "2005-03-15", "MX": "2016-07-01", "PH": "2011-06-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-03-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-03-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-january-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170209214335/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-10-15", "IN": "2008-04-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-08-01", "CN": "2013-09-08", "IN": "2005-03-15", "MX": "2016-08-01", "PH": "2011-07-22"},
+    "EB-3 Other": {"ROW": "2016-08-01", "CN": "2005-12-01", "IN": "2005-03-15", "MX": "2016-08-01", "PH": "2011-07-22"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-04-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-04-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-february-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170209214335/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-11-15", "IN": "2008-04-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-10-01", "CN": "2013-10-01", "IN": "2005-03-22", "MX": "2016-10-01", "PH": "2011-10-15"},
+    "EB-3 Other": {"ROW": "2016-10-01", "CN": "2005-12-01", "IN": "2005-03-22", "MX": "2016-10-01", "PH": "2011-10-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-04-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-04-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-march-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170323143810/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2012-12-15", "IN": "2008-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2016-12-01", "CN": "2014-03-15", "IN": "2005-03-22", "MX": "2016-12-01", "PH": "2012-03-15"},
+    "EB-3 Other": {"ROW": "2016-12-01", "CN": "2006-02-01", "IN": "2005-03-22", "MX": "2016-12-01", "PH": "2012-03-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-05-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-05-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-april-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170429182311/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-01-15", "IN": "2008-06-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-02-15", "CN": "2014-08-15", "IN": "2005-03-24", "MX": "2017-02-15", "PH": "2012-09-15"},
+    "EB-3 Other": {"ROW": "2017-02-15", "CN": "2006-03-01", "IN": "2005-03-24", "MX": "2017-02-15", "PH": "2012-09-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-05-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-05-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2009-04-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-05-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2005-07-01", "MX": "C", "PH": "2013-09-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-may-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170429182311/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-02-08", "IN": "2008-06-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-03-15", "CN": "2014-10-01", "IN": "2005-03-25", "MX": "2017-03-15", "PH": "2013-01-01"},
+    "EB-3 Other": {"ROW": "2017-03-15", "CN": "2006-03-08", "IN": "2005-03-25", "MX": "2017-03-15", "PH": "2013-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-10-01", "IN": "2009-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2006-04-22", "MX": "C", "PH": "2014-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2006-04-22", "MX": "C", "PH": "2014-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-june-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170609094711/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-01", "IN": "2008-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-04-15", "CN": "2014-10-01", "IN": "2005-05-15", "MX": "2017-04-15", "PH": "2013-05-01"},
+    "EB-3 Other": {"ROW": "2017-04-15", "CN": "2006-07-15", "IN": "2005-05-15", "MX": "2017-04-15", "PH": "2013-05-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2015-07-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-10-01", "IN": "2009-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2006-04-22", "MX": "C", "PH": "2014-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2006-04-22", "MX": "C", "PH": "2014-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-july-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170710061146/https://www.uscis.gov/visabulletin-Jul-2017",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-03-22", "IN": "2008-07-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-06-08", "CN": "2012-01-01", "IN": "2006-02-15", "MX": "2017-06-08", "PH": "2014-05-15"},
+    "EB-3 Other": {"ROW": "2017-06-08", "CN": "2006-07-15", "IN": "2006-02-15", "MX": "2017-06-08", "PH": "2014-05-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2015-08-15", "MX": "2015-08-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2015-08-15", "MX": "2015-08-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-10-01", "IN": "2009-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2006-10-01", "MX": "C", "PH": "2015-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2006-10-01", "MX": "C", "PH": "2015-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-august-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170824142710/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "2015-04-01", "CN": "2013-04-22", "IN": "2008-07-22", "MX": "2015-04-01", "PH": "2015-04-01"},
+    "EB-3": {"ROW": "C", "CN": "2012-01-01", "IN": "2006-07-15", "MX": "C", "PH": "2015-06-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2004-01-01", "IN": "2006-07-15", "MX": "C", "PH": "2015-06-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2015-09-15", "MX": "2015-09-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2015-09-15", "MX": "2015-09-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-10-01", "IN": "2009-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2007-01-01", "MX": "C", "PH": "2016-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2007-01-01", "MX": "C", "PH": "2016-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2017/visa-bulletin-for-september-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20170824142710/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "2016-01-01", "CN": "2013-05-15", "IN": "2008-08-22", "MX": "2016-01-01", "PH": "2016-01-01"},
+    "EB-3": {"ROW": "C", "CN": "2012-01-01", "IN": "2006-10-15", "MX": "C", "PH": "2015-11-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2004-01-01", "IN": "2006-10-15", "MX": "C", "PH": "2015-11-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2015-10-22", "MX": "2015-10-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2015-10-22", "MX": "2015-10-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-10-01", "IN": "2009-02-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2007-01-01", "MX": "C", "PH": "2016-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2007-01-01", "MX": "C", "PH": "2016-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-october-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180221194645/https://www.uscis.gov/visabulletin-oct-17",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-05-22", "IN": "2008-09-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-01-01", "IN": "2006-10-15", "MX": "C", "PH": "2015-12-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2006-01-01", "IN": "2006-10-15", "MX": "C", "PH": "2015-12-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-03-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-03-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-06-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-06-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-11-15", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-november-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20171214145502/https://www.uscis.gov/visabulletin-nov-17",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-06-15", "IN": "2008-10-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-02-01", "IN": "2006-10-15", "MX": "C", "PH": "2016-01-15"},
+    "EB-3 Other": {"ROW": "C", "CN": "2006-04-01", "IN": "2006-10-15", "MX": "C", "PH": "2016-01-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-04-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-07-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-11-15", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2017-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-december-2017.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20171223051807/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-07-01", "IN": "2008-11-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-03-08", "IN": "2006-10-15", "MX": "C", "PH": "2016-01-15"},
+    "EB-3 Other": {"ROW": "C", "CN": "2006-07-01", "IN": "2006-10-15", "MX": "C", "PH": "2016-01-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-04-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-04-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-07-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-11-15", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-january-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20171223051807/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-08-08", "IN": "2008-11-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-04-15", "IN": "2006-11-01", "MX": "C", "PH": "2016-02-15"},
+    "EB-3 Other": {"ROW": "C", "CN": "2006-12-22", "IN": "2006-11-01", "MX": "C", "PH": "2016-02-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-06-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-11-15", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-february-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180221171931/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-10-01", "IN": "2008-12-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-09-15", "IN": "2006-12-01", "MX": "C", "PH": "2016-03-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-02-01", "IN": "2006-12-01", "MX": "C", "PH": "2016-03-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-06-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2014-11-15", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-march-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180221171931/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2013-12-08", "IN": "2008-12-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-11-15", "IN": "2007-01-01", "MX": "C", "PH": "2016-05-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-03-01", "IN": "2007-01-01", "MX": "C", "PH": "2016-05-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-07-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-07-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-02-01", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-10-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-01-01", "MX": "C", "PH": "2016-10-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-april-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180827163404/https://www.uscis.gov/visabulletin-apr-18",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2014-08-01", "IN": "2008-12-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-01", "IN": "2008-02-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-04-01", "IN": "2008-02-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-08-08", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-02-01", "IN": "2009-02-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2008-04-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-04-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-may-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180827163410/https://www.uscis.gov/visabulletin-may-18",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2014-09-01", "IN": "2008-12-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-01", "IN": "2008-05-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-05-01", "IN": "2008-05-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-10-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-10-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-07-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-02-01", "IN": "2009-04-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2008-09-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-09-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-june-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180705055836/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2014-09-01", "IN": "2008-12-26", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-01", "IN": "2008-05-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-05-01", "IN": "2008-05-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-10-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-10-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-08-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-02-01", "IN": "2009-04-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2008-09-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2008-09-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-july-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180705055836/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-01-01", "IN": "2009-03-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2013-01-01", "IN": "2008-11-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-05-01", "IN": "2008-11-01", "MX": "C", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-02-08", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-02-08", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-08-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-04-01", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2009-05-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2009-05-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-august-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180827131238/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2016-05-01", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "2016-05-01", "PH": "2016-05-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-03-01", "IN": "2009-03-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2014-07-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-06-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-05-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-06-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2016-02-08", "MX": "2016-02-08", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2016-02-08", "MX": "2016-02-08", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-08-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-04-01", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2009-05-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2009-05-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2018/visa-bulletin-for-september-2018.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20180827131238/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2016-06-01", "CN": "2012-01-01", "IN": "2012-01-01", "MX": "2016-06-01", "PH": "2016-06-01"},
+    "EB-2": {"ROW": "2013-01-01", "CN": "2013-01-01", "IN": "2007-01-01", "MX": "2013-01-01", "PH": "2013-01-01"},
+    "EB-3": {"ROW": "2016-11-01", "CN": "2014-11-01", "IN": "2003-01-01", "MX": "2016-11-01", "PH": "2016-11-01"},
+    "EB-3 Other": {"ROW": "2016-11-01", "CN": "2007-05-01", "IN": "2003-01-01", "MX": "2016-11-01", "PH": "2016-11-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "2016-02-15", "MX": "2016-02-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "2016-02-15", "MX": "2016-02-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-08-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-04-01", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2009-05-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2009-05-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-october-2018.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20181224014709/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-october-2018",
+   "final": {
+    "EB-1": {"ROW": "2017-04-01", "CN": "2016-06-01", "IN": "2016-06-01", "MX": "2017-04-01", "PH": "2017-04-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-04-01", "IN": "2009-03-26", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-06-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-05-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-06-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-10-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-06-15", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-08-08", "IN": "2009-10-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2009-10-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-november-2018.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20190110105255/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-november-2018",
+   "final": {
+    "EB-1": {"ROW": "2017-04-01", "CN": "2016-06-01", "IN": "2016-06-01", "MX": "2017-04-01", "PH": "2017-04-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-05-15", "IN": "2009-03-26", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-06-08"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-05-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-06-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-11-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-11-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-06-15", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-08-08", "IN": "2009-10-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2009-10-01", "MX": "C", "PH": "2017-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2018-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-december-2018.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20181203181025/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2017-07-01", "CN": "2016-09-01", "IN": "2016-09-01", "MX": "2017-07-01", "PH": "2017-07-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-07-01", "IN": "2009-04-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-08", "IN": "2009-03-01", "MX": "C", "PH": "2017-06-15"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-06-01", "IN": "2009-03-01", "MX": "C", "PH": "2017-06-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-01-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-08-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-08-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-09-08", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-12-01", "IN": "2010-01-01", "MX": "C", "PH": "2017-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-01-01", "MX": "C", "PH": "2017-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-january-2019.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20190222203930/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-january-2019",
+   "final": {
+    "EB-1": {"ROW": "2017-10-01", "CN": "2016-12-15", "IN": "2016-12-15", "MX": "2017-10-01", "PH": "2017-10-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-08-01", "IN": "2009-04-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-06-08", "IN": "2009-03-01", "MX": "C", "PH": "2017-06-22"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-07-01", "IN": "2009-03-01", "MX": "C", "PH": "2017-06-22"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-04-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-09-08", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2010-04-01", "MX": "C", "PH": "2017-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "2017-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-february-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190222144226/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2017-12-01", "CN": "2017-02-08", "IN": "2017-02-08", "MX": "2017-12-01", "PH": "2017-12-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-10-01", "IN": "2009-04-06", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-07-01", "IN": "2009-04-22", "MX": "C", "PH": "2017-08-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-08-01", "IN": "2009-04-22", "MX": "C", "PH": "2017-08-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-09-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-11-01", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2010-04-01", "MX": "C", "PH": "2017-10-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "2017-10-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-march-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190222144226/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-01-01", "CN": "2017-02-22", "IN": "2017-02-22", "MX": "2018-01-01", "PH": "2018-01-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-01-01", "IN": "2009-04-09", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-07-08", "IN": "2009-05-22", "MX": "C", "PH": "2017-12-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-08-15", "IN": "2009-05-22", "MX": "C", "PH": "2017-12-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-05-01", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2010-04-01", "MX": "C", "PH": "2018-03-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "2018-03-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-april-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190411143926/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-02-01", "CN": "2017-02-22", "IN": "2017-02-22", "MX": "2018-02-01", "PH": "2018-02-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-04-01", "IN": "2009-04-12", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-08-01", "IN": "2009-06-22", "MX": "C", "PH": "2018-03-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-08-22", "IN": "2009-06-22", "MX": "C", "PH": "2018-03-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-04-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-07-01", "IN": "2009-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2010-04-01", "MX": "C", "PH": "2018-07-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "2018-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-08", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-may-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190717124535/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-may-2019",
+   "final": {
+    "EB-1": {"ROW": "2018-03-01", "CN": "2017-02-22", "IN": "2017-02-22", "MX": "2018-03-01", "PH": "2018-03-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-05-15", "IN": "2009-04-16", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-08-22", "IN": "2009-07-01", "MX": "C", "PH": "2018-06-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-09-01", "IN": "2009-07-01", "MX": "C", "PH": "2018-06-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-08-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-08-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-09-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-09-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-09-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-09-01", "PH": "2018-09-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-09-01", "IN": "2009-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2010-04-01", "MX": "C", "PH": "2018-10-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "2018-10-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-june-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190620035516/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-04-22", "CN": "2017-02-22", "IN": "2015-01-01", "MX": "2018-04-22", "PH": "2018-04-22"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-04-19", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-09-15", "IN": "2009-07-01", "MX": "C", "PH": "2018-11-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-09-01", "IN": "2009-07-01", "MX": "C", "PH": "2018-11-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-10-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-10-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-09-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-09-01", "PH": "2018-09-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-11-01", "IN": "2009-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2010-04-01", "MX": "C", "PH": "2019-01-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "2019-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-11-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-july-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190723025254/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-04-22", "CN": "2017-05-08", "IN": "2015-01-01", "MX": "2018-04-22", "PH": "2018-04-22"},
+    "EB-2": {"ROW": "C", "CN": "2016-11-01", "IN": "2009-04-24", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2007-11-22", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-07-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-07-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "2017-05-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-01", "IN": "2017-05-01", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-09-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-09-01", "PH": "2018-09-01"},
+    "EB-2": {"ROW": "C", "CN": "2017-02-01", "IN": "2009-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-06-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-11-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-august-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190824072351/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2016-07-01", "CN": "2016-07-01", "IN": "2015-01-01", "MX": "2016-07-01", "PH": "2016-07-01"},
+    "EB-2": {"ROW": "2017-01-01", "CN": "2017-01-01", "IN": "2009-05-02", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-3": {"ROW": "2016-07-01", "CN": "2016-07-01", "IN": "2006-01-01", "MX": "2016-07-01", "PH": "2016-07-01"},
+    "EB-3 Other": {"ROW": "2016-07-01", "CN": "2007-11-22", "IN": "2006-01-01", "MX": "2016-07-01", "PH": "2016-07-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-07-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2016-07-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-15", "IN": "2014-10-15", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-15", "IN": "2014-10-15", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-09-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-09-01", "PH": "2018-09-01"},
+    "EB-2": {"ROW": "C", "CN": "2017-02-01", "IN": "2009-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-06-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-11-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2019/visa-bulletin-for-september-2019.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20190929103239/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2017-10-01", "CN": "2014-01-01", "IN": "U", "MX": "2017-10-01", "PH": "2017-10-01"},
+    "EB-2": {"ROW": "2018-01-01", "CN": "2017-01-01", "IN": "2009-05-08", "MX": "2018-01-01", "PH": "2018-01-01"},
+    "EB-3": {"ROW": "2016-07-01", "CN": "2014-01-01", "IN": "2005-07-01", "MX": "2016-07-01", "PH": "2016-07-01"},
+    "EB-3 Other": {"ROW": "2016-07-01", "CN": "2007-11-22", "IN": "2005-07-01", "MX": "2016-07-01", "PH": "2016-07-01"},
+    "EB-4": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-22", "IN": "2017-09-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-10-22", "IN": "2017-09-01", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2018-09-01", "CN": "2017-10-01", "IN": "2017-10-01", "MX": "2018-09-01", "PH": "2018-09-01"},
+    "EB-2": {"ROW": "C", "CN": "2017-06-01", "IN": "2009-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-06-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-06-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-11-22", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-october-2019.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20191014213829/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-04-22", "CN": "2016-11-01", "IN": "2015-01-01", "MX": "2018-04-22", "PH": "2018-04-22"},
+    "EB-2": {"ROW": "C", "CN": "2015-01-01", "IN": "2009-05-12", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-11-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-10-15"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-01-01", "IN": "2009-01-01", "MX": "C", "PH": "2017-10-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-05-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-10-22", "IN": "2017-11-22", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2019-07-01", "CN": "2017-09-01", "IN": "2017-03-15", "MX": "2019-07-01", "PH": "2019-07-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-01-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-01-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-november-2019.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20191121221827/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-06-01", "CN": "2017-02-01", "IN": "2015-01-01", "MX": "2018-06-01", "PH": "2018-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-03-15", "IN": "2009-05-13", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-11-01", "IN": "2009-01-01", "MX": "C", "PH": "2018-02-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-02-01", "IN": "2009-01-01", "MX": "C", "PH": "2018-02-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-07-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-07-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-01", "IN": "2017-12-08", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-11-01", "IN": "2017-12-08", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "2019-07-01", "CN": "2017-09-01", "IN": "2017-03-15", "MX": "2019-07-01", "PH": "2019-07-01"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-01-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-01-01", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2019-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-december-2019.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20191207113259/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-file-your-adjustment-status-application-family-sponsored-or-employment-based-preference-visas-december-2019",
+   "final": {
+    "EB-1": {"ROW": "2018-07-15", "CN": "2017-05-15", "IN": "2015-01-01", "MX": "2018-07-15", "PH": "2018-07-15"},
+    "EB-2": {"ROW": "C", "CN": "2015-06-22", "IN": "2009-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-11-01", "IN": "2009-01-01", "MX": "C", "PH": "2018-03-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-03-01", "IN": "2009-01-01", "MX": "C", "PH": "2018-03-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-07-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-15", "IN": "2018-01-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-09-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-january-2020.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20200811034818/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/when-to-file-your-adjustment-of-status-application-for-family-sponsored-or-employment-based-47",
+   "final": {
+    "EB-1": {"ROW": "2018-10-01", "CN": "2017-05-22", "IN": "2015-01-01", "MX": "2018-10-01", "PH": "2018-10-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-07-01", "IN": "2009-05-18", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2015-12-01", "IN": "2009-01-01", "MX": "C", "PH": "2018-03-15"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-04-01", "IN": "2009-01-01", "MX": "C", "PH": "2018-03-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-08-08", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-11-22", "IN": "2018-05-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-10-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-01-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-3 Other": {"ROW": "2019-01-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-february-2020.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20200213065629/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2018-12-01", "CN": "2017-05-22", "IN": "2015-01-01", "MX": "2018-12-01", "PH": "2018-12-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-07-15", "IN": "2009-05-19", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2016-01-01", "IN": "2009-01-08", "MX": "C", "PH": "2018-06-01"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-05-01", "IN": "2009-01-08", "MX": "C", "PH": "2018-06-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-09-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-09-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2014-12-01", "IN": "2018-09-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2014-12-01", "IN": "2018-09-01", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-10-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-01-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-3 Other": {"ROW": "2019-01-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-march-2020.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20200315120737/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2019-03-01", "CN": "2017-06-01", "IN": "2015-03-01", "MX": "2019-03-01", "PH": "2019-03-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-08-15", "IN": "2009-05-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-01-01", "CN": "2016-03-22", "IN": "2009-01-15", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "2017-01-01", "CN": "2008-06-01", "IN": "2009-01-15", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-11-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2017-11-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "2018-10-22", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "2018-10-22", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-10-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-01-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-3 Other": {"ROW": "2019-01-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-april-2020.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20200426183531/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "2019-06-01", "CN": "2017-06-08", "IN": "2015-05-01", "MX": "2019-06-01", "PH": "2019-06-01"},
+    "EB-2": {"ROW": "C", "CN": "2015-09-01", "IN": "2009-05-25", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-01-01", "CN": "2016-04-15", "IN": "2009-01-22", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "2017-01-01", "CN": "2008-07-01", "IN": "2009-01-22", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-01-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-01-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "2019-01-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-05-15", "IN": "2019-01-01", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-10-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-01-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-3 Other": {"ROW": "2019-01-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-01-01", "PH": "2019-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-may-2020.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20200502050032/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2017-07-15", "IN": "2015-08-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-10-01", "IN": "2009-06-02", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-01-01", "CN": "2016-05-15", "IN": "2009-03-01", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-3 Other": {"ROW": "2017-01-01", "CN": "2008-07-15", "IN": "2009-03-01", "MX": "2017-01-01", "PH": "2017-01-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-05-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-05-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-07-01", "IN": "2019-10-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-07-01", "IN": "2019-10-01", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-10-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-04-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-3 Other": {"ROW": "2019-04-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-june-2020.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20200616165429/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2017-08-15", "IN": "2016-06-08", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-11-01", "IN": "2009-06-12", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2017-11-08", "CN": "2016-06-15", "IN": "2009-04-01", "MX": "2017-11-08", "PH": "2017-11-08"},
+    "EB-3 Other": {"ROW": "2017-11-08", "CN": "2008-07-15", "IN": "2009-04-01", "MX": "2017-11-08", "PH": "2017-11-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-08", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-08", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-07-15", "IN": "2020-01-01", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-07-15", "IN": "2020-01-01", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-10-01", "IN": "2017-03-15", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-07-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-04-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-3 Other": {"ROW": "2019-04-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-july-2020.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20200706235533/https://www.uscis.gov/visabulletininfo",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2017-08-22", "IN": "2017-05-08", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2015-11-08", "IN": "2009-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2018-04-15", "CN": "2016-06-22", "IN": "2009-06-01", "MX": "2018-04-15", "PH": "2018-04-15"},
+    "EB-3 Other": {"ROW": "2018-04-15", "CN": "2008-07-22", "IN": "2009-06-01", "MX": "2018-04-15", "PH": "2018-04-15"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-07-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-07-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2017-11-01", "IN": "2017-08-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-08-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-04-01", "CN": "2017-03-01", "IN": "2010-02-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-3 Other": {"ROW": "2019-04-01", "CN": "2008-08-01", "IN": "2010-02-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-august-2020.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20200820175331/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2018-02-08", "IN": "2018-02-08", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-01-15", "IN": "2009-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-04-01", "CN": "2017-02-15", "IN": "2009-10-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-3 Other": {"ROW": "2019-04-01", "CN": "2008-08-01", "IN": "2009-10-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-08", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2018-07-01", "IN": "2018-07-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-08-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2020-04-01", "CN": "2017-05-01", "IN": "2010-02-01", "MX": "2020-04-01", "PH": "2020-04-01"},
+    "EB-3 Other": {"ROW": "2020-04-01", "CN": "2008-10-01", "IN": "2010-02-01", "MX": "2020-04-01", "PH": "2020-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2020/visa-bulletin-for-september-2020.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20200930040426/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2018-03-01", "IN": "2018-03-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-01-15", "IN": "2009-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2019-04-01", "CN": "2017-02-15", "IN": "2009-10-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-3 Other": {"ROW": "2019-04-01", "CN": "2008-08-01", "IN": "2009-10-01", "MX": "2019-04-01", "PH": "2019-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-06-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2018-07-01", "IN": "2018-07-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-08-01", "IN": "2009-08-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "2020-04-01", "CN": "2017-05-01", "IN": "2010-02-01", "MX": "2020-04-01", "PH": "2020-04-01"},
+    "EB-3 Other": {"ROW": "2020-04-01", "CN": "2008-10-01", "IN": "2010-02-01", "MX": "2020-04-01", "PH": "2020-04-01"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-october-2020.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20201028063612/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2018-06-01", "IN": "2018-06-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-03-01", "IN": "2009-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-07-01", "IN": "2010-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-12-01", "IN": "2010-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-09-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2020-09-01", "IN": "2020-09-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2008-10-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-november-2020.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20201117131045/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2018-12-01", "IN": "2018-12-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-04-22", "IN": "2009-09-22", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-10-01", "IN": "2010-03-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-01-01", "IN": "2010-03-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-10-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-10-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2020-09-01", "IN": "2020-09-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-05-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2020-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-december-2020.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20201218051034/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2019-04-01", "IN": "2019-04-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-05-01", "IN": "2009-10-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-11-01", "IN": "2010-03-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-02-15", "IN": "2010-03-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-11-22", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-11-22", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2020-11-01", "IN": "2020-11-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-05-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-january-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210122042437/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2019-09-01", "IN": "2019-09-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-06-01", "IN": "2009-10-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2017-12-15", "IN": "2010-03-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-03-01", "IN": "2010-03-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-12-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2020-11-01", "IN": "2020-11-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-07-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-february-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210224155350/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2020-01-01", "IN": "2020-01-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-06-15", "IN": "2009-10-12", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-01-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-04-01", "IN": "2010-04-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-12-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2018-12-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "2020-11-01", "IN": "2020-11-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-07-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-march-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210322195133/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "2020-08-01", "IN": "2020-08-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-07-15", "IN": "2010-01-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-02-08", "IN": "2010-07-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-05-01", "IN": "2010-07-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-01-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-07-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-april-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210429225201/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-09-01", "IN": "2010-05-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-15", "IN": "2010-09-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-06-01", "IN": "2010-09-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-02-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-02-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2017-01-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-08-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-09-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-may-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210525140659/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-12-01", "IN": "2010-08-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-05-15", "IN": "2011-02-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-08-01", "IN": "2011-02-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-03-15", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-03-15", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2017-07-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-09-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-11-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-june-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210625061240/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2017-05-01", "IN": "2010-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-09-01", "IN": "2011-11-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-10-01", "IN": "2011-11-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-11-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-11-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-09-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-09-15", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-01-01", "IN": "2011-08-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-01-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-01-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-july-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210721153653/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2017-12-01", "IN": "2011-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-01-01", "IN": "2013-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-12-01", "IN": "2013-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-02-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-02-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-11-08", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-07-01", "IN": "2011-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-07-01", "IN": "2014-02-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-05-01", "IN": "2014-02-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-august-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210820183422/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-04-01", "IN": "2011-06-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-01-08", "IN": "2013-07-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-01-01", "IN": "2013-07-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-02-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-02-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-11-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-07-01", "IN": "2011-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-07-01", "IN": "2014-02-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-05-01", "IN": "2014-02-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-september-2021.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20210924154246/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-07-01", "IN": "2011-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-01-08", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-02-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-03-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-03-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-09-01", "IN": "2011-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-07-01", "IN": "2014-03-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-05-01", "IN": "2014-03-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-10",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-october-2021.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20211022075250/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-07-01", "IN": "2011-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-01-08", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-02-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-03-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-09-01", "IN": "2012-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2019-01-15", "IN": "2014-01-08", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-05-01", "IN": "2014-01-08", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-11",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-november-2021.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20211129041718/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2018-11-15", "IN": "2011-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-03-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-02-01", "IN": "2013-01-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2010-05-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2021-12",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-december-2021.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20211218135017/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-01-01", "IN": "2012-05-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2012-03-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2013-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-05-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-01",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-january-2022.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20220125222701/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-01-22", "IN": "2012-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2012-03-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2013-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-05-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-02",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-february-2022.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20220218085149/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-03-01", "IN": "2013-01-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2012-04-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2013-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-06-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-03",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-march-2022.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20220323232619/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-03-01", "IN": "2013-05-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2012-05-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2013-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-07-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-04",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-april-2022.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20220416011006/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-03-01", "IN": "2013-07-08", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2012-06-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "U", "CN": "U", "IN": "U", "MX": "U", "PH": "U"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2014-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-08-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-05",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-may-2022.html",
+   "uscis_chart": "filing",
+   "uscis_source": "https://web.archive.org/web/20220531023623/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-03-01", "IN": "2013-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2012-06-01", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2014-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-08-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-06",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-june-2022.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20220604094059/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-03-01", "IN": "2014-09-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "2019-05-08", "CN": "2012-06-01", "IN": "2012-01-15", "MX": "2019-05-08", "PH": "2019-05-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2014-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-08-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-12-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-07",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-july-2022.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20220716105106/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2014-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-03-22", "IN": "2012-01-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "2019-05-08", "CN": "2012-06-01", "IN": "2012-01-15", "MX": "2019-05-08", "PH": "2019-05-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-05-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-08-01", "IN": "2012-01-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-12-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-08",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-august-2022.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20220808111206/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2014-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-22", "IN": "2012-02-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "2019-05-08", "CN": "2012-06-01", "IN": "2012-02-15", "MX": "2019-05-08", "PH": "2019-05-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-11-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-05-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-05-22", "IN": "2012-02-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-08-01", "IN": "2012-02-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-12-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
+   "month": "2022-09",
+   "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2022/visa-bulletin-for-september-2022.html",
+   "uscis_chart": "final",
+   "uscis_source": "https://web.archive.org/web/20220928002705/https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin",
+   "final": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-04-01", "IN": "2014-12-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-04-22", "IN": "2012-02-15", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "2019-05-08", "CN": "2012-06-01", "IN": "2012-02-15", "MX": "2019-05-08", "PH": "2019-05-08"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2020-04-01", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2015-12-22", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   },
+   "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2019-05-01", "IN": "2015-01-01", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-05-22", "IN": "2012-02-22", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2015-08-01", "IN": "2012-02-22", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Unreserved": {"ROW": "C", "CN": "2016-01-01", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Rural": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 High Unemployment": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Infrastructure": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"}
+   }
+  },
+  {
    "month": "2022-10",
    "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2023/visa-bulletin-for-october-2022.html",
    "uscis_chart": "filing",

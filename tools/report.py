@@ -6,8 +6,9 @@ Usage:  python3 tools/report.py --since REV [--mention USER]
         python3 tools/report.py --month YYYY-MM [--mention USER]
 
 --since compares site/data.json at git revision REV with the working tree. It reports each
-bulletin month added since then, with how the queue's two cutoffs moved against the month
-before, and the chart USCIS named for any month that had none. --month reports that one
+bulletin month added after REV's newest, with how the queue's two cutoffs moved against the
+month before, and the chart USCIS named for REV's newest month if it had none (months added
+before it, as in a backfill, aren't news). --month reports that one
 bulletin as if it had just been added. Prints nothing when there is nothing to report. The
 Notify workflow (.github/workflows/notify.yml) opens an issue from the output, which GitHub
 emails to the owner.
@@ -108,8 +109,10 @@ def main():
         except subprocess.CalledProcessError:
             print(f"can't read site/data.json at {args.since}; nothing to report", file=sys.stderr)
             return
-        added = [m for m in months if m not in old]
-        charted = [m for m in months if m in old and now[m].get("uscis_chart") in CHARTS
+        # Only what's newer than the newest month before: a backfill of older months is not news.
+        newest = max(old)
+        added = [m for m in months if m > newest]
+        charted = [m for m in months if m == newest and now[m].get("uscis_chart") in CHARTS
                    and now[m]["uscis_chart"] != old[m].get("uscis_chart")]
     if not added and not charted:
         return

@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Add the Visa Bulletin months data/ doesn't have yet, then rebuild site/data.json.
 
-Usage:  python3 tools/update.py
+Usage:  python3 tools/update.py [--from YYYY-MM]
+
+--from also imports the months from YYYY-MM up to the oldest one in data/bulletins; the dataset
+starts at 2015-10. Those older months keep whatever rows they had, such as EB-5's regional-center
+split before May 2022, where every new month must have today's ten categories.
 
 travel.state.gov turns away automated clients (Cloudflare answers 403), so cutoffs come from
 armanckeser/visa-bulletin-data, a CC0 dataset that caches each bulletin page and parses it.
@@ -17,6 +21,7 @@ one, the run stops.
 Exit status: 0 when data/ has the current month's bulletin; 3 when the dataset doesn't have
 it yet (whatever it does have is still imported); 1 on any other problem.
 """
+import argparse
 import calendar
 import datetime as dt
 import html
@@ -38,16 +43,20 @@ USCIS = ("https://www.uscis.gov/green-card/green-card-processes-and-procedures/"
 BULLETIN = ("https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/"
             "{fy}/visa-bulletin-for-{name}-{year}.html")
 
-# Dataset category code -> ours, in the order the bulletin files list them.
+# Dataset category code -> ours, in the order the bulletin files list them. These are today's
+# rows, and every new month must have all of them.
 CATEGORIES = {
     "EB1": "EB-1", "EB2": "EB-2", "EB3": "EB-3", "EW": "EB-3 Other", "EB4": "EB-4",
     "EB4_RW": "EB-4 Religious", "EB5_UNRESERVED": "EB-5 Unreserved", "EB5_RURAL": "EB-5 Rural",
     "EB5_HIGH_UNEMPLOYMENT": "EB-5 High Unemployment", "EB5_INFRASTRUCTURE": "EB-5 Infrastructure",
 }
-# The dataset files today's "5th Unreserved" row under EB5_UNRESERVED_I5_R5, though its README
-# keeps that code for May 2022, when the row was split in two. Either code is taken; a month
-# that has both is ambiguous.
-UNRESERVED = ("EB5_UNRESERVED", "EB5_UNRESERVED_I5_R5")
+# Until April 2022, EB-5 had a row for C5 and T5 investors and another for regional-center ones,
+# I5 and R5. EB5_TEA_REGIONAL_PILOT, a row of October 2015's dates-for-filing table only, is left out.
+OLD_CATEGORIES = {"EB5_NON_REGIONAL_CENTER": "EB-5 Non-Regional Center", "EB5_REGIONAL_CENTER": "EB-5 Regional Center"}
+# The dataset files the "5th Unreserved" row under EB5_UNRESERVED_I5_R5 from June 2022 on, though
+# its README keeps that code for May 2022. That month, the only one with both codes, split the
+# unreserved row the old way, C5 and T5 apart from I5 and R5, so its two rows continue those.
+UNRESERVED = {"EB5_UNRESERVED": "EB-5 Non-Regional Center", "EB5_UNRESERVED_I5_R5": "EB-5 Regional Center"}
 COUNTRIES = ("ROW", "CN", "IN", "MX", "PH")
 CHARTS = {"final_action": "final", "dates_for_filing": "filing"}
 MONTHS = {name.lower(): i for i, name in enumerate(calendar.month_name) if name}
@@ -73,22 +82,30 @@ def fetch(url):
 
 
 def dataset_bulletins():
-    """{month: {"final": {category: {country: value}}, "filing": ...}}, or None for an ambiguous month."""
-    out, codes = {}, {}
-    for r in json.loads(fetch(DATASET_RAW + "visa_bulletin.json")):
+    """{month: {"final": {category: {country: value}}, "filing": ...}}, our categories and countries only."""
+    rows = [r for r in json.loads(fetch(DATASET_RAW + "visa_bulletin.json"))
+            if r["kind"] == "employment" and r["country"] in COUNTRIES]
+    codes = {}
+    for r in rows:
+        codes.setdefault(r["bulletin"], set()).add(r["category"])
+    out = {}
+    for r in rows:
         code, mo = r["category"], r["bulletin"]
-        if r["kind"] != "employment" or r["country"] not in COUNTRIES:
-            continue
         if code in UNRESERVED:
-            codes.setdefault(mo, set()).add(code)
-            code = "EB5_UNRESERVED"
-        if code not in CATEGORIES:
-            continue
-        value = {"current": "C", "unavailable": "U"}.get(r["status"], r["date"])
-        table = out.setdefault(mo, {"final": {}, "filing": {}})[CHARTS[r["chart"]]]
-        table.setdefault(CATEGORIES[code], {})[r["country"]] = value
-    out.update({mo: None for mo, seen in codes.items() if len(seen) > 1})
+            cat = UNRESERVED[code] if codes[mo] >= UNRESERVED.keys() else "EB-5 Unreserved"
+        else:
+            cat = CATEGORIES.get(code) or OLD_CATEGORIES.get(code)
+        if cat:
+            value = {"current": "C", "unavailable": "U"}.get(r["status"], r["date"])
+            out.setdefault(mo, {"final": {}, "filing": {}})[CHARTS[r["chart"]]].setdefault(cat, {})[r["country"]] = value
     return out
+
+
+def layout(b):
+    """An older bulletin as it stands: whichever categories and countries it has, in file order."""
+    order = [*CATEGORIES.values(), *OLD_CATEGORIES.values()]
+    return {t: {cat: {c: b[t][cat][c] for c in COUNTRIES if c in b[t][cat]} for cat in order if cat in b[t]}
+            for t in ("final", "filing")}
 
 
 def canonical(b, mo):
@@ -112,8 +129,8 @@ def dump(b):
 def check_history(ours, theirs):
     diffs = []
     for mo, b in ours.items():
-        if not theirs.get(mo):
-            diffs.append(f"{mo}: {'ambiguous' if mo in theirs else 'missing'} in the dataset")
+        if mo not in theirs:
+            diffs.append(f"{mo}: missing from the dataset")
             continue
         for table in ("final", "filing"):
             for cat, row in b[table].items():
@@ -141,7 +158,19 @@ def uscis_charts():
     return found
 
 
+def url(mo):
+    y, m = map(int, mo.split("-"))
+    return BULLETIN.format(fy=y + (m >= 10), name=calendar.month_name[m].lower(), year=y)
+
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--from", dest="start", metavar="YYYY-MM",
+                    help="also import the months from this one up to the oldest in data/bulletins")
+    args = ap.parse_args()
+    if args.start and not re.fullmatch(r"\d{4}-(0[1-9]|1[0-2])", args.start):
+        ap.error("--from takes YYYY-MM")
+
     ours = {f.stem: json.loads(f.read_text()) for f in sorted(BULLETINS.glob("*.json"))}
     theirs = dataset_bulletins()
     check_history(ours, theirs)
@@ -149,15 +178,16 @@ def main():
 
     new, mo = [], next_month(max(ours))
     while mo in theirs:
-        if theirs[mo] is None:
-            raise Stop(f"{mo}: the dataset has both EB-5 unreserved rows")
         new.append(mo)
         mo = next_month(mo)
-    files = {}
-    for mo in new:
-        y, m = map(int, mo.split("-"))
-        url = BULLETIN.format(fy=y + (m >= 10), name=calendar.month_name[m].lower(), year=y)
-        files[mo] = {"month": mo, "url": url, "source": DATASET, **canonical(theirs[mo], mo)}
+    files = {mo: {"month": mo, "url": url(mo), "source": DATASET, **canonical(theirs[mo], mo)} for mo in new}
+    old, mo = [], args.start
+    while mo and mo < min(ours):
+        if mo not in theirs:
+            raise Stop(f"{mo}: not in the dataset, which starts at {min(theirs)}")
+        old.append(mo)
+        mo = next_month(mo)
+    files.update({mo: {"month": mo, "url": url(mo), "source": DATASET, **layout(theirs[mo])} for mo in old})
 
     charts = json.loads(CHARTS_FILE.read_text())
     before = json.dumps(dict(sorted(charts.items())), indent=1, ensure_ascii=False)
@@ -171,7 +201,7 @@ def main():
     except (OSError, ValueError) as e:
         recorded = {}
         print(f"warning: couldn't read the dataset's USCIS record: {e}", file=sys.stderr)
-    for mo in sorted([*ours, *new]):
+    for mo in sorted([*old, *ours, *new]):
         have, said = (charts.get(mo) or {}).get("chart"), page.get(mo, set())
         if len(said) > 1:
             raise Stop(f"{mo}: the USCIS page names both charts")
@@ -188,6 +218,9 @@ def main():
 
     for mo, b in files.items():
         (BULLETINS / f"{mo}.json").write_text(dump(b))
+    if old:
+        print(f"added {old[0]} to {old[-1]}, {len(old)} earlier months")
+    for mo in new:
         print(f"added {mo}; USCIS chart: {(charts.get(mo) or {}).get('chart') or 'not named yet'}")
     if after != before:
         CHARTS_FILE.write_text(after)

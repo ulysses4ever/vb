@@ -1,0 +1,25 @@
+{
+  "month": "2021-03",
+  "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2021/visa-bulletin-for-march-2021.html",
+  "source": "https://github.com/armanckeser/visa-bulletin-data",
+  "final": {
+    "EB-1": {"ROW": "C", "CN": "2020-08-01", "IN": "2020-08-01", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-07-15", "IN": "2010-01-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-02-08", "IN": "2010-07-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-05-01", "IN": "2010-07-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-01-01", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "2019-01-01", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-08-15", "IN": "C", "MX": "C", "PH": "C"}
+  },
+  "filing": {
+    "EB-1": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-2": {"ROW": "C", "CN": "2016-10-01", "IN": "2011-05-15", "MX": "C", "PH": "C"},
+    "EB-3": {"ROW": "C", "CN": "2018-06-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-3 Other": {"ROW": "C", "CN": "2009-07-01", "IN": "2014-01-01", "MX": "C", "PH": "C"},
+    "EB-4": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-4 Religious": {"ROW": "C", "CN": "C", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Non-Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"},
+    "EB-5 Regional Center": {"ROW": "C", "CN": "2015-12-15", "IN": "C", "MX": "C", "PH": "C"}
+  }
+}

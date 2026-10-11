@@ -46,7 +46,7 @@ async function launch() {
 const browser = await launch();
 const chartJs = fs.existsSync(CHART_JS) ? fs.readFileSync(CHART_JS) : null;
 
-async function open(query = '', { width = 390, height = 844, dark = false, blockCdn = false } = {}) {
+async function open(query = '', { width = 390, height = 844, dark = false, blockCdn = false, touch = false } = {}) {
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
@@ -65,7 +65,7 @@ async function open(query = '', { width = 390, height = 844, dark = false, block
     }
     return r.continue();
   });
-  await page.setViewport({ width, height, deviceScaleFactor: 2 });
+  await page.setViewport({ width, height, deviceScaleFactor: 2, hasTouch: touch, isMobile: touch });
   await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: dark ? 'dark' : 'light' }]);
   await page.goto(BASE + 'index.html' + query, { waitUntil: 'networkidle0' });
   await page.waitForFunction(() => !document.getElementById('table-sec').hidden || !document.getElementById('error').hidden, { timeout: 10000 });
@@ -115,8 +115,8 @@ await check('priority date before / after the filing cutoff gives "Can file" / "
 await check('chart: hover and arrow keys show the tooltip', async () => {
   const { page } = await open('?category=EB-2&country=ROW');
   await page.$eval('#chart-sec', (c) => c.scrollIntoView({ block: 'center' }));
-  const box = await page.$eval('#chart', (c) => { const r = c.getBoundingClientRect(); return { x: r.left, y: r.top, w: r.width, h: r.height }; });
-  await page.mouse.move(box.x + box.w * 0.3, box.y + box.h * 0.5, { steps: 3 });
+  const box = await page.$eval('#chart-scroll', (c) => { const r = c.getBoundingClientRect(); return { x: r.left, y: r.top, w: r.width, h: r.height }; });
+  await page.mouse.move(box.x + box.w * 0.6, box.y + box.h * 0.5, { steps: 3 });
   assert.match(await page.$eval('#tip', (t) => (t.hidden ? '' : t.innerText)), /bulletin/);
   await page.mouse.move(1, 1);
   await page.focus('#chart');
@@ -125,6 +125,57 @@ await check('chart: hover and arrow keys show the tooltip', async () => {
   const [y, m] = first.split('-').map(Number);
   const firstLabel = `${new Date(Date.UTC(y, m - 1, 1)).toLocaleString('en-US', { month: 'long', timeZone: 'UTC' })} ${y}`;
   assert.match(await page.$eval('#tip', (t) => (t.hidden ? '' : t.innerText)), new RegExp(firstLabel));
+  await page.close();
+});
+
+await check('phone: the chart opens on the newest months, with its y-axis pinned', async () => {
+  const { page } = await open('?category=EB-2&country=ROW');
+  const s = await page.$eval('#chart-scroll', (e) => ({ left: e.scrollLeft, width: e.clientWidth, total: e.scrollWidth }));
+  assert.ok(s.total > s.width, `the chart doesn't scroll: ${JSON.stringify(s)}`);
+  assert.ok(s.left + s.width >= s.total - 2, `not at the newest months: ${JSON.stringify(s)}`);
+  assert.equal(await page.$eval('#chart-axis', (e) => !e.hidden), true);
+  await page.close();
+});
+
+await check('chart: the y-axis fits the months in view', async () => {
+  const lag = (m, v) => (v === 'C' ? 0 : /^\d{4}-\d{2}-\d{2}$/.test(v || '') ? Math.max(0, (Date.parse(`${m}-01T00:00:00Z`) - Date.parse(`${v}T00:00:00Z`)) / 864e5 / 30.436875) : null);
+  let peak = { month: null, lag: -1 };
+  for (const b of data.bulletins) for (const t of ['final', 'filing']) {
+    const v = lag(b.month, b[t]?.['EB-2']?.ROW);
+    if (v != null && v > peak.lag) peak = { month: b.month, lag: v };
+  }
+  const { page, errors } = await open('?category=EB-2&country=ROW');
+  const view = () => page.evaluate((m) => {
+    const ch = Chart.getChart('chart'), sc = document.getElementById('chart-scroll'), x = ch.scales.x.getPixelForValue(ch.data.labels.indexOf(m));
+    return { yMax: ch.scales.y.max, inView: x >= sc.scrollLeft + ch.chartArea.left && x <= sc.scrollLeft + sc.clientWidth };
+  }, peak.month);
+  const first = await view();
+  if (!first.inView) assert.ok(first.yMax < peak.lag, `the ${peak.month} peak is out of view, yet the axis reaches ${first.yMax}`);
+  await page.evaluate((m) => {
+    const ch = Chart.getChart('chart'), sc = document.getElementById('chart-scroll');
+    sc.scrollLeft = ch.scales.x.getPixelForValue(ch.data.labels.indexOf(m)) - sc.clientWidth / 2;
+  }, peak.month);
+  await page.waitForFunction((v) => Chart.getChart('chart').scales.y.max >= v, { timeout: 3000 }, peak.lag);
+  assert.deepEqual(errors, []);
+  await page.close();
+});
+
+await check('phone: a tap opens a month; tapping it again, or off the chart, closes it', async () => {
+  const { page, errors } = await open('?category=EB-2&country=ROW', { touch: true });
+  await page.$eval('#chart-sec', (c) => c.scrollIntoView({ block: 'center' }));
+  const at = await page.$eval('#chart-scroll', (e) => { const r = e.getBoundingClientRect(); return { x: r.left + r.width * 0.7, y: r.top + r.height * 0.5 }; });
+  const off = await page.$eval('#chart-sec h2', (e) => { const r = e.getBoundingClientRect(); return { x: r.left + 10, y: r.top + r.height / 2 }; });
+  const shown = () => page.$eval('#tip', (t) => !t.hidden);
+  const tap = async (p) => { await page.touchscreen.tap(p.x, p.y); await new Promise((r) => setTimeout(r, 400)); };  // apart, so not a double tap
+  await tap(at);
+  assert.equal(await shown(), true, 'a tap opens the month');
+  await tap(at);
+  assert.equal(await shown(), false, 'a second tap on it closes it');
+  await tap(at);
+  assert.equal(await shown(), true, 'and a third opens it again');
+  await tap(off);
+  assert.equal(await shown(), false, 'a tap off the chart closes it');
+  assert.deepEqual(errors, []);
   await page.close();
 });
 

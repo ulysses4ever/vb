@@ -18,10 +18,12 @@ No build step and no backend. Chart.js 4.4.1 loads from cdnjs; fonts load from G
 
 ## Status
 
-- **Data:** 49 bulletins, October 2022 to October 2026. All employment-based categories for ROW, CN, IN,
-  MX and PH, in both charts. USCIS's chart choice is recorded for all 49 months (23 Dates for Filing,
-  26 Final Action). The November 2026 bulletin was not yet published on 2026-10-11.
-- **Page:** finished; 8 headless checks pass (`npm test`).
+- **Data:** 133 bulletins, October 2015 (when the Dates for Filing chart began) to October 2026. All
+  employment-based categories for ROW, CN, IN, MX and PH, in both charts. USCIS's chart choice is
+  recorded for all 133 months (49 Dates for Filing, 84 Final Action). October 2015 to September 2022
+  were added on 2026-10-11 with `tools/update.py --from 2015-10`. The November 2026 bulletin was not
+  yet published on 2026-10-11.
+- **Page:** finished; 10 headless checks pass (`npm test`).
 - **Hosting:** live at https://ulysses4ever.github.io/vb/ (repo `ulysses4ever/vb`). The workflow
   `.github/workflows/pages.yml` publishes `site/` to GitHub Pages on every push to `main`.
 - **Updates:** automatic. A systemd timer on the owner's machine (um690) runs `tools/update.py` daily
@@ -85,9 +87,16 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
 - Categories: `EB-1`, `EB-2`, `EB-3`, `EB-3 Other`, `EB-4`, `EB-4 Religious`, `EB-5 Unreserved`,
   `EB-5 Rural`, `EB-5 High Unemployment`, `EB-5 Infrastructure`. Countries: `ROW`, `CN`, `IN`, `MX`, `PH`.
   The page also accepts other keys and lists them after these.
-- The build checks: valid values and real dates; Dates for Filing never earlier than Final Action;
-  a USCIS chart for every month but the newest (which may be `null` until USCIS names it); no missing
-  months; 48 spot checks (`SPOT_CHECKS` in `build_data.py`).
+- Until April 2022, EB-5 has `EB-5 Non-Regional Center` (C5 and T5 investors) and `EB-5 Regional Center`
+  (I5 and R5) instead of the unreserved row and set-asides. May 2022 split the unreserved row the same
+  way, so its two rows carry those names; `EB-5 Unreserved` starts in June 2022. October 2015's filing
+  table has no EB-5 row: its one row, "Targeted Employment Areas/Regional Centers and Pilot Programs",
+  is left out.
+- The build checks: valid values and real dates; a USCIS chart for every month but the newest (which
+  may be `null` until USCIS names it); no missing months; 48 spot checks (`SPOT_CHECKS` in
+  `build_data.py`). A Dates for Filing cutoff earlier than its Final Action one is only a warning: the
+  bulletins printed that in 11 cells from 2017 to 2020 (`KNOWN_INVERSIONS`, each checked against the
+  bulletin page), such as EB-3 rest of world in January 2020, final action C and filing 01JAN19.
 
 ## How the data was gathered and checked
 
@@ -100,10 +109,16 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
 - **Independent checks.** 48 values spread across every fiscal year in the data were compared with law-firm and
   university summaries of the same bulletins, and the July 2023 EB-2 ROW filing date was re-read from
   the State Department page. All match.
-- **USCIS chart.** USCIS's own page shows only the current month, and uscis.gov and the Wayback Machine
-  were unreachable from the session. Each month therefore comes from AILA's monthly post quoting USCIS's
-  announcement (Morgan Lewis where AILA had no post), corroborated by at least one other summary. No
-  sources disagreed. Every month's URL is in `data/uscis_chart.json`.
+- **USCIS chart, October 2022 on.** USCIS's own page shows only the current month, and uscis.gov and
+  the Wayback Machine were unreachable from the first session. Each month therefore comes from AILA's
+  monthly post quoting USCIS's announcement (Morgan Lewis where AILA had no post), corroborated by at
+  least one other summary. No sources disagreed. Every month's URL is in `data/uscis_chart.json`.
+- **USCIS chart, October 2015 to September 2022.** Taken from Wayback Machine copies of USCIS's own pages,
+  with each month's snapshot URL as its source. 67 months come from the main page, which was
+  `uscis.gov/visabulletininfo` until July 2020. The other 17 come from the per-month USCIS pages that
+  the main page linked to. Every statement names its own month. Across about 550 statements, no month
+  had two different values. Run the same way over October 2022 to September 2023, the method matched
+  the AILA-sourced values exactly.
 - **Lesson.** One secondary summary listed 1 May 2023 as the July 2023 EB-2 ROW Dates for Filing
   cutoff; the bulletin says 01DEC22. Take values from the bulletin pages only.
 
@@ -120,7 +135,7 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
   `C` counts as 0 and `U` leaves a gap in the chart.
 - The fiscal year starts in October. In FY2023–FY2026, USCIS accepted Dates for Filing from October
   and switched to Final Action in April 2023, March 2024, February 2025 and May 2026. October 2026 is
-  Dates for Filing again.
+  Dates for Filing again. In FY2016–FY2022, Final Action was the more common choice (58 of 84 months).
 
 ## Page details
 
@@ -130,8 +145,18 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
   browser only.
 - Fallbacks: a clear error if the data can't load, an "open a JSON file" control, and table-only
   rendering if Chart.js fails to load.
-- Accessibility: the table holds every charted value; the chart takes keyboard focus (←/→, Home, End)
-  and shows the same tooltip as on hover.
+- Chart width: 8 px per bulletin month (`PX_PER_MONTH`), or the box's width if that's wider. A longer
+  history scrolls sideways inside `#chart-scroll` and opens on the newest months. Once the chart is
+  scrolled off its own y-axis, `#chart-axis`, a copy that the `axis` plugin redraws on every render,
+  stays pinned over the left edge.
+- Y-axis: it fits the months in view (`fitY`, run on scroll). It always starts at Current and rises only
+  as high as the visible months need, so September 2018's one-month EB-2 rest-of-world retrogression
+  (final action 01JAN13, 68 months behind) doesn't flatten today's lines unless it's on screen.
+- Tooltip: a mouse shows it on hover. A tap shows that month, and tapping the same month again or
+  anywhere off the chart closes it. Chart.js gets pointer events but ignores touch ones (the `noTouch`
+  plugin), because it would show a month on every tap and never hide it.
+- Accessibility: the table holds every charted value. Keyboard focus on the chart (not a tap) shows the
+  newest month; ←/→, Home and End step through months, scrolling them into view; Escape closes it.
 - Theming: every color is a CSS token on `:root`, redefined for dark under `prefers-color-scheme` and
   `[data-theme="dark"]`. The chart re-reads the tokens when the theme changes. The series colors
   (#2a78d6 and #eb6834; dark #3987e5 and #d95926) passed color-vision-deficiency separation and
@@ -198,12 +223,16 @@ Read the bulletin pages directly. You'll have to fetch them by hand, given the b
 ## Next steps
 
 1. **Optional.** A notice when a configured priority date becomes fileable under the chart USCIS
-   accepts; a backfill to October 2015, when the Dates for Filing chart began (the dataset has it);
-   family-based tables.
+   accepts; family-based tables.
 
 ## Gotchas
 
 - travel.state.gov blocks automated clients (see "Monthly updates"); uscis.gov doesn't.
+- One USCIS chart per month is a simplification that a few months break. October–December 2016:
+  EB-1 to EB-4 used Dates for Filing but EB-5 used Final Action (recorded as filing). January–February
+  2020: EB-3 and other workers from most countries could file under Final Action, which was current,
+  while the rest used Dates for Filing (recorded as filing). October 2021 – April 2022: EB-5
+  regional-center filings were not accepted, or only partly.
 - October–December bulletins live in the next fiscal year's folder.
 - Some FY2023 bulletins print an extra El Salvador/Guatemala/Honduras column for EB-4. Ignore it.
 - Row labels change punctuation between months (for example "(Rural - 20%)"), so match by keyword.

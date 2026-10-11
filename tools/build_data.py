@@ -11,9 +11,10 @@ Inputs (relative to the repo root):
   data/uscis_chart.json        {"2026-10": {"chart": "filing" | "final" | null, "source": "<url>"}, ...}
 
 Checks (exit 1 on any problem): month keys, value format (C, U or a real ISO date),
-Dates for Filing never earlier than Final Action, a USCIS chart recorded for every month
-but the newest (which may be null until USCIS names it), no missing months, and spot
-checks against values confirmed from independent sources.
+a USCIS chart recorded for every month but the newest (which may be null until USCIS names
+it), no missing months, and spot checks against values confirmed from independent sources.
+A Dates for Filing cutoff earlier than its Final Action one is only a warning: the bulletins
+have printed that (KNOWN_INVERSIONS), so a new one is worth a look but not a failed build.
 """
 import argparse
 import datetime as dt
@@ -25,6 +26,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MONTH_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
 VALUE_RE = re.compile(r"^(C|U|\d{4}-\d{2}-\d{2})$")
+
+# (month, category, country) where the bulletin itself printed a Dates for Filing cutoff earlier
+# than the Final Action one (EB-3 rest of world in January 2020: final action C, filing 01JAN19),
+# each checked against the bulletin page.
+KNOWN_INVERSIONS = {
+    ("2017-04", "EB-3", "CN"), ("2019-08", "EB-3", "CN"), ("2020-10", "EB-3 Other", "CN"),
+    *((m, cat, c) for m in ("2020-01", "2020-02") for cat in ("EB-3", "EB-3 Other") for c in ("ROW", "MX")),
+}
 
 # (month, table, category, country) -> value, each confirmed against a source other than
 # the bulletin extract (law-firm or university summaries of that month's bulletin; 2023-07
@@ -80,7 +89,7 @@ def main():
     args = ap.parse_args()
 
     uscis = json.loads((ROOT / "data" / "uscis_chart.json").read_text())
-    problems, bulletins = [], []
+    problems, warnings, bulletins = [], [], []
     files = sorted((ROOT / "data" / "bulletins").glob("*.json"))
     for f in files:
         d = json.loads(f.read_text())
@@ -101,12 +110,12 @@ def main():
         for cat, row in d.get("final", {}).items():
             for c, fa in row.items():
                 df = d.get("filing", {}).get(cat, {}).get(c)
-                if not df or "U" in (fa, df):
+                if not df or "U" in (fa, df) or (mo, cat, c) in KNOWN_INVERSIONS:
                     continue
                 if fa == "C" and df != "C":
-                    problems.append(f"{mo} {cat} {c}: final action is C but filing is {df}")
+                    warnings.append(f"{mo} {cat} {c}: final action is C but filing is {df}")
                 elif fa != "C" and df != "C" and df < fa:
-                    problems.append(f"{mo} {cat} {c}: filing {df} is earlier than final {fa}")
+                    warnings.append(f"{mo} {cat} {c}: filing {df} is earlier than final {fa}")
         u = uscis.get(mo) or {}
         # USCIS names its chart days after the bulletin comes out, so the newest month may
         # still be null; the page shows that as "USCIS chart not recorded".
@@ -151,6 +160,8 @@ def main():
     json.loads(out.read_text())
     print(f"{len(bulletins)} bulletins ({bulletins[0]['month']} to {bulletins[-1]['month']}), "
           f"spot checks {passed}/{len(SPOT_CHECKS)}, wrote {out.relative_to(ROOT)}")
+    for w in warnings:
+        print(f"warning: {w}", file=sys.stderr)
     if problems:
         print("\n".join(problems), file=sys.stderr)
         sys.exit(1)
