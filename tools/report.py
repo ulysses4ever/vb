@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Say what a change to the data adds: a title line, a blank line, then a Markdown body.
+"""Say what a change to the data adds for one queue, EB-2 rest of world: a title line, a blank
+line, then a Markdown body.
 
 Usage:  python3 tools/report.py --since REV [--mention USER]
         python3 tools/report.py --month YYYY-MM [--mention USER]
 
 --since compares site/data.json at git revision REV with the working tree. It reports each
-bulletin month added since then, with what moved against the month before, and the chart
-USCIS named for any month that had none. --month reports that one bulletin as if it had just
-been added. Prints nothing when there is nothing to report. The Notify workflow
-(.github/workflows/notify.yml) opens an issue from the output, which GitHub emails to the owner.
+bulletin month added since then, with how the queue's two cutoffs moved against the month
+before, and the chart USCIS named for any month that had none. --month reports that one
+bulletin as if it had just been added. Prints nothing when there is nothing to report. The
+Notify workflow (.github/workflows/notify.yml) opens an issue from the output, which GitHub
+emails to the owner.
 """
 import argparse
 import calendar
@@ -20,7 +22,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://ulysses4ever.github.io/vb/"
-COUNTRIES = {"ROW": "rest of world", "CN": "China", "IN": "India", "MX": "Mexico", "PH": "Philippines"}
+# The one queue the notifications follow.
+CATEGORY, COUNTRY, QUEUE = "EB-2", "ROW", "EB-2 rest of world"
 CHARTS = {"filing": "Dates for Filing", "final": "Final Action Dates"}
 
 
@@ -57,28 +60,32 @@ def move(old, new):
     return f"{code(old)} → {code(new)} ({size})"
 
 
+def cutoff(b, table):
+    return b.get(table, {}).get(CATEGORY, {}).get(COUNTRY)
+
+
 def chart(b):
+    """The chart USCIS takes for the month, and so who in the queue can file."""
     if b.get("uscis_chart") not in CHARTS:
         return f"USCIS hasn't named its chart for {name(b['month'])} yet; another issue will say when it does."
     source = f" ([source]({b['uscis_source']}))" if b.get("uscis_source") else ""
-    return (f"USCIS takes **{CHARTS[b['uscis_chart']]}** for employment-based I-485s filed in "
-            f"{name(b['month'])}{source}.")
+    v = cutoff(b, b["uscis_chart"])
+    who = ("" if v is None else f", so {QUEUE} can file with any priority date" if v == "C"
+           else f", so {QUEUE} can't file this month" if v == "U"
+           else f", so {QUEUE} can file with a priority date before **{code(v)}**")
+    return f"USCIS takes **{CHARTS[b['uscis_chart']]}** for I-485s filed in {name(b['month'])}{source}{who}."
 
 
 def section(b, prev):
-    lines = [f"The [{name(b['month'])} Visa Bulletin]({b['url']}) is on the [tracker]({SITE}).", "", chart(b)]
-    if prev is None:
-        return lines
-    rows = []
-    for cat in b["final"]:
-        for c, country in COUNTRIES.items():
-            cells = [(prev.get(t, {}).get(cat, {}).get(c), b.get(t, {}).get(cat, {}).get(c)) for t in ("final", "filing")]
-            if any(new is not None and old != new for old, new in cells):
-                rows.append(f"| {cat}, {country} | " + " | ".join(move(o, n) if n else "" for o, n in cells) + " |")
-    if not rows:
-        return lines + ["", f"No cutoff moved since {name(prev['month'])}."]
-    return lines + ["", f"What moved since {name(prev['month'])}:", "",
-                    "| | Final action | Dates for filing |", "|---|---|---|", *rows]
+    lines = [f"The [{name(b['month'])} Visa Bulletin]({b['url']}) is on the [tracker]({SITE}).", "",
+             f"{QUEUE}:", ""]
+    for table, label in (("final", "Final action"), ("filing", "Dates for filing")):
+        old, new = cutoff(prev, table) if prev else None, cutoff(b, table)
+        if new is None:
+            lines.append(f"- {label}: not in this bulletin")
+        else:
+            lines.append(f"- {label}: {move(old, new)}" + (" (no change)" if prev and old == new else ""))
+    return lines + ["", chart(b)]
 
 
 def main():
@@ -113,15 +120,16 @@ def main():
         if len(added) > 1:
             body += [f"### {name(m)}", ""]
         body += section(now[m], now[months[i - 1]] if i else None) + [""]
-    body += [chart(now[m]) for m in charted]
+    for m in charted:
+        body += [chart(now[m]), ""]
     if not added:
-        body += ["", f"The [tracker]({SITE}) shows it now."]
+        body.append(f"The [tracker]({SITE}) shows it now.")
     if args.mention and body[0].startswith("#"):
         body = [f"@{args.mention}", ""] + body
     elif args.mention:
         body[0] = f"@{args.mention} {body[0]}"
     if added:
-        title = f"Visa Bulletin for {name(added[-1])}"
+        title = f"Visa Bulletin for {name(added[-1])}: {QUEUE}"
     else:
         title = f"USCIS: {CHARTS[now[charted[-1]]['uscis_chart']]} for {name(charted[-1])}"
     print(title, "", "\n".join(body).strip(), sep="\n")

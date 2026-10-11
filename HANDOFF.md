@@ -171,8 +171,9 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
   repo only (`~/.ssh/vb-deploy`). Logs: `journalctl -u vb-update`. Run it now:
   `sudo systemctl start vb-update`. A failed run, exit 3 included, shows in `systemctl --failed`.
 - **Notifications.** `.github/workflows/notify.yml` runs on every push that touches `data/`.
-  `tools/report.py` says what the push added: the new bulletin, what moved against the month before,
-  and USCIS's chart, or the chart alone when USCIS names it later. The workflow opens that as an issue
+  `tools/report.py` says what the push added, for EB-2 rest of world only (`CATEGORY` and `COUNTRY` at
+  its top): the new bulletin's two cutoffs and how they moved against the month before, and the chart
+  USCIS takes with the filing cutoff that makes, or the chart alone when USCIS names it later. The workflow opens that as an issue
   from github-actions[bot] that @-mentions the owner, and GitHub emails it. A daily run also opens one
   issue when the current month's bulletin is still missing on the 3rd or later. To send a month's
   notification again: `gh workflow run notify.yml -f month=2026-10`.
