@@ -1,0 +1,70 @@
+# Daily: tools/update.py imports any new bulletin and the chart USCIS takes for it, and a
+# change is pushed, which redeploys the site and sends the notification. The same job the um690
+# timer runs (~/dotfiles/machines/um690/vb-update.nix); while both run, whichever comes first
+# imports a month and the other finds nothing new. This one runs at 06:41 UTC, after the
+# dataset's 06:17 check and before the timer's 12:00.
+#
+# A push made with the workflow's own token starts no other workflow, so this one starts the
+# Pages deploy and Notify itself: workflow_dispatch is the one event that token may trigger.
+#
+# Exit 3 (the dataset has no bulletin for this month yet) is only a warning here; from the 3rd,
+# Notify's daily check opens an issue about it. Any other failure fails the run, which GitHub
+# emails.
+name: Update
+
+on:
+  schedule:
+    - cron: '41 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Import new bulletins and USCIS charts
+        run: |
+          rc=0
+          python3 -u tools/update.py 2>&1 | tee "$RUNNER_TEMP/log" || rc=$?
+          sed -n 's/^warning: /::warning::/p' "$RUNNER_TEMP/log"
+          case $rc in
+            0) ;;
+            3) echo "::warning::$(grep 'has no bulletin for' "$RUNNER_TEMP/log")" ;;
+            *) exit "$rc" ;;
+          esac
+
+      - name: Commit and push
+        id: push
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            exit 0
+          fi
+          added=$(git -C data/bulletins ls-files --others --exclude-standard | sed 's/\.json$//' | xargs)
+          what=${added:+add $added}
+          echo "before=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data site
+          git commit --quiet -m "data: ${what:-USCIS chart} (Update workflow)"
+          git push --quiet origin "HEAD:$GITHUB_REF_NAME"
+          echo "pushed $(git rev-parse --short HEAD)"
+
+      - name: Deploy the site and send the notification
+        if: steps.push.outputs.before
+        env:
+          BEFORE: ${{ steps.push.outputs.before }}
+        run: |
+          gh workflow run pages.yml --ref "$GITHUB_REF_NAME"
+          gh workflow run notify.yml --ref "$GITHUB_REF_NAME" -f since="$BEFORE"
