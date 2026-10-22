@@ -532,7 +532,7 @@
   "source": "https://www.aila.org/library/uscis-adjustment-of-status-filing-dates-for-october-2026"
  },
  "2026-11": {
-  "chart": null,
-  "source": null
+  "chart": "filing",
+  "source": "https://www.uscis.gov/green-card/green-card-processes-and-procedures/visa-availability-priority-dates/adjustment-of-status-filing-charts-from-the-visa-bulletin"
  }
 }
