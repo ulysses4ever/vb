@@ -1,13 +1,12 @@
 # Opens an issue whenever a push adds a bulletin or records the chart USCIS takes, and
 # @-mentions the owner, so that GitHub emails them; tools/report.py writes it. The issue
-# comes from github-actions[bot] because GitHub doesn't notify people of their own activity,
-# and the um690 timer pushes with a deploy key, as the owner. The Update workflow's pushes
-# start no workflows, so it runs this one itself, with `since` set to the commit before.
+# comes from github-actions[bot] because GitHub doesn't notify people of their own activity.
+# The Update workflow's pushes start no workflows, so it runs this one itself, with `since`
+# set to the commit before; a push by hand runs it as a push.
 #
 # Daily, it also checks that the current month's bulletin is in. From the 3rd on, a missing
-# one means the bulletin is late or, more likely, the updaters have stopped (the Update
-# workflow fails, and um690 is off or tools/update.py keeps failing there). One issue says
-# so; close it once that's sorted.
+# one means the bulletin is late or, more likely, the updater has stopped (the Update
+# workflow keeps failing). One issue says so; close it once that's sorted.
 name: Notify
 
 on:
@@ -71,5 +70,5 @@ jobs:
           title="No bulletin for $month in the tracker yet"
           open=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq length)
           if [ "$open" = 0 ]; then
-            gh issue create --title "$title" --body "@$OWNER It's past the 3rd and data/bulletins has no $month.json. Either the bulletin is late or the updaters have stopped: see the Update workflow's runs, and \`systemctl status vb-update\` and \`journalctl -u vb-update\` on um690. Close this once it's in."
+            gh issue create --title "$title" --body "@$OWNER It's past the 3rd and data/bulletins has no $month.json. Either the bulletin is late or the Update workflow has stopped: see its runs. Close this once it's in."
           fi

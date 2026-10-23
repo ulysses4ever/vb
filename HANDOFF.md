@@ -26,10 +26,9 @@ No build step and no backend. Chart.js 4.4.1 loads from cdnjs; fonts load from G
 - **Page:** finished; 10 headless checks pass (`npm test`).
 - **Hosting:** live at https://ulysses4ever.github.io/vb/ (repo `ulysses4ever/vb`). The workflow
   `.github/workflows/pages.yml` publishes `site/` to GitHub Pages on every push to `main`.
-- **Updates:** automatic. A systemd timer on the owner's machine (um690) runs `tools/update.py` daily
-  and pushes whatever is new, which redeploys the site. Each new bulletin or USCIS chart opens an issue
-  that GitHub emails to the owner. See "Monthly updates". The Update workflow does the same from
-  GitHub Actions; it is on trial since 2026-10-22, to replace the timer if it holds up.
+- **Updates:** automatic. The Update workflow runs `tools/update.py` daily on GitHub Actions and pushes
+  whatever is new, which redeploys the site. Each new bulletin or USCIS chart opens an issue that GitHub
+  emails to the owner. See "Monthly updates".
 
 ## Layout
 
@@ -45,7 +44,7 @@ tools/test.mjs                 headless checks; serves site/ itself
 package.json                   npm scripts and test dependencies
 .github/workflows/pages.yml    publishes site/ to GitHub Pages on push to main
 .github/workflows/notify.yml   opens the notification issues (and the stale-data one)
-.github/workflows/update.yml   runs tools/update.py daily and pushes; on trial beside the um690 timer
+.github/workflows/update.yml   runs tools/update.py daily and pushes what's new
 ```
 
 ## Commands
@@ -190,19 +189,14 @@ Opening `index.html` straight from disk (`file://`) can't load `data.json`, beca
   says "USCIS chart not recorded".
 - **Exit status.** 0 means `data/` has the current month's bulletin. 3 means the dataset doesn't have
   it yet; whatever it has is still imported. 1 means anything else went wrong.
-- **The timer.** `~/dotfiles/machines/um690/vb-update.nix` runs it daily at 08:00 local time; a run with
-  nothing new changes nothing. A bulletin comes out some time in the month before it applies (as late
-  as the 29th for October 2026), the dataset has it within six hours, and USCIS names its chart days
-  later, so each reaches the site within a day. The job uses a clone of its own in
-  `/var/lib/vb-update/vb`, commits as the owner, and pushes with a deploy key that can write to this
-  repo only (`~/.ssh/vb-deploy`). Logs: `journalctl -u vb-update`. Run it now:
-  `sudo systemctl start vb-update`. A failed run, exit 3 included, shows in `systemctl --failed`.
-- **The Update workflow.** `.github/workflows/update.yml` does the timer's job from GitHub Actions, daily
-  at 06:41 UTC (the timer runs at 12:00 UTC), committing as github-actions[bot]. Its pushes start no
-  workflows, so it starts the Pages deploy and Notify itself (`-f since=<commit before>`). Exit 3 is a
-  warning there, and any other failure fails the run, which GitHub emails. On trial since 2026-10-22;
-  once it has carried a bulletin through, the timer and its deploy key can go. Run it now:
-  `gh workflow run update.yml`.
+- **The Update workflow.** `.github/workflows/update.yml` runs it daily at 06:41 UTC, after the dataset's
+  06:17 check; a run with nothing new changes nothing. A bulletin comes out some time in the month before
+  it applies (as late as the 29th for October 2026), the dataset has it within six hours, and USCIS names
+  its chart days later, so each reaches the site within a day. It commits as github-actions[bot]. Those
+  pushes start no workflows, so it starts the Pages deploy and Notify itself (`-f since=<commit before>`).
+  Exit 3 is a warning, and any other failure fails the run, which GitHub emails. Run it now:
+  `gh workflow run update.yml`. Until 2026-10-22 a systemd timer on the owner's machine (um690) did this
+  job, pushing with a deploy key; its commits say "(vb-update on um690)". The timer and the key are gone.
 - **Notifications.** `.github/workflows/notify.yml` runs on every push that touches `data/`.
   `tools/report.py` says what the push added, for EB-2 rest of world only (`CATEGORY` and `COUNTRY` at
   its top): the new bulletin's two cutoffs and how they moved against the month before, and the chart

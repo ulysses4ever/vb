@@ -1,8 +1,6 @@
 # Daily: tools/update.py imports any new bulletin and the chart USCIS takes for it, and a
-# change is pushed, which redeploys the site and sends the notification. The same job the um690
-# timer runs (~/dotfiles/machines/um690/vb-update.nix); while both run, whichever comes first
-# imports a month and the other finds nothing new. This one runs at 06:41 UTC, after the
-# dataset's 06:17 check and before the timer's 12:00.
+# change is pushed, which redeploys the site and sends the notification. It runs at 06:41 UTC,
+# after the dataset's 06:17 check; HANDOFF.md, "Monthly updates", has the rest.
 #
 # A push made with the workflow's own token starts no other workflow, so this one starts the
 # Pages deploy and Notify itself: workflow_dispatch is the one event that token may trigger.
